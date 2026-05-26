@@ -57,11 +57,11 @@ export default function ShoppingList() {
 
   const renderContent = () => {
     if (loading) {
-      return <p>Loading...</p>;
+      return <p className="loading">Loading...</p>;
     }
 
     if (Object.keys(weeklyPlans).length === 0) {
-      return <p>No meals planned yet. Add meals to your plan to generate a shopping list.</p>;
+      return <p className="no-results">No meals planned yet. Add meals to your plan to generate a shopping list.</p>;
     }
 
     return Object.entries(weeklyPlans).sort().map(([weekKey, weekPlans]) => {

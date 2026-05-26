@@ -9,6 +9,11 @@
         }
 
         &__view {
+
+            .loading, .no-results {
+                @include theme-property("color", $color-primary, $color-ivory);
+            }
+
             @media (min-width: $mq-desktop) {
                 padding: 0 20px 0 0;
             }

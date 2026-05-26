@@ -8,8 +8,6 @@ import "./recipe-card.scss";
 
 export const RecipeCard = ({meal}: MealSlotProps) => {
 
-  console.log(meal);
-
   return (
     <article className="recipe-card">
       <Link href="/lorem" className="recipe-card__wrapper">
