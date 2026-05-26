@@ -1,0 +1,120 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+
+.input {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    @include theme-property("border-color", $color-border-dark, $color-border-faint); 
+    border-radius: 10px;
+    padding: 8px;
+    @include theme-property("background-color", $color-white, $color-secondary);
+
+    svg {
+        margin: 0 8px 0 0;
+        width: 15px;
+        @include theme-property("color", $color-primary, $color-ivory);
+    } 
+
+    input {
+        flex: 1;
+        border: 0;
+        outline: none;
+        font-family: var(--font-nexa), sans-serif;
+        @include font-rem(14);
+        @include theme-property("background-color", $color-white, $color-secondary);
+        @include theme-property("color", $color-primary, $color-ivory);
+
+        &::placeholder {
+            @include theme-property("color", $color-primary, $color-ivory);
+        }
+    }
+
+    &__text {
+        border: 2px solid;
+        border-radius: 10px;
+        @include theme-property("border-color", $color-border-light, $color-border-faint);
+        padding: 8px 20px;
+        width: 100%;
+        font-family: var(--font-nexa), sans-serif;
+        @include font-rem(12);
+        font-weight: $weight-bold;
+        line-height: 1;
+        background-color: transparent;
+        @include theme-property("color", $color-primary, $color-ivory);
+        outline: none;    
+
+        &:focus {
+            @include theme-property("border-color", $color-primary, $color-tertiary);
+        }
+
+        @media (min-width: $mq-tablet) {
+            @include font-rem(14);
+        }
+
+        @media (min-width: $mq-desktop) {
+            min-width: 250px;
+        }
+    }
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+
+    input {
+        display: none;
+
+        + label {
+            position: relative;
+            padding: 0 0 0 30px;
+            @include font-rem(14);
+            @include theme-property("color", $color-primary, $color-ivory);
+            cursor: pointer;
+
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);          
+            }
+
+            &::before {
+                border-radius: 5px;
+                width: 20px;
+                height: 20px;
+                background-color: $color-secondary;
+            }
+
+            &::after {
+                top: 12px;
+                left: 4px;
+                background: 50% / cover url("../../../../public/assets/icons/check.svg") no-repeat;
+                width: 12px;
+                height: 11px;
+                transform: translateY(-50%) scale(0);
+                transition: $trans-fast;
+            }
+
+            @media (min-width: $mq-desktop) {
+                @include font-rem(16);
+            }
+        }
+
+        &:checked + label::after {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+}
+
+.error {
+    margin: 8px 0 0;
+    @include font-rem(12);
+    color: $color-error;
+    text-align: right;
+
+    @media (min-width: $mq-tablet) {
+        @include font-rem(14);
+    }
+}

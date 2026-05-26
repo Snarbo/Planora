@@ -1,0 +1,77 @@
+@use "../../app/styles/helpers/variables.scss" as *;
+@use "../../app/styles/helpers/mixins.scss" as *;
+
+.days {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    @include theme-property("border-color", transparent, $color-border-faint);
+    padding: 8px 20px;
+    background-color: $color-primary;
+    
+    &__day {
+        flex: 1;
+        border-radius: 4px;
+        padding: 8px;
+        max-width: 48px;
+
+        &-day, &-date {
+            @include theme-property("color", $color-grey, $color-ivory); 
+            line-height: 1;
+            text-align: center;       
+        }
+
+        &-day {
+            @include font-rem(12);
+
+            @media (min-width: $mq-desktop) {
+                @include font-rem(18);
+                font-weight: $weight-heavy;
+            }
+        }
+
+        &-date {
+            margin: 6px 0 0;
+            @include font-rem(14);
+            font-weight: $weight-heavy;
+        }
+
+        &--active {
+            background-color: $color-tertiary;
+
+            .days__day {
+                &-day, &-date {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        @media (min-width: $mq-tablet) {
+            margin: 0 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: $mq-desktop) {
+            margin: 0;
+            padding: 10px;
+            max-width: initial;
+        }
+    }  
+    
+    @media (min-width: $mq-desktop) {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 30px;
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+}

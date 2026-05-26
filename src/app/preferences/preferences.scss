@@ -1,0 +1,166 @@
+@use "../styles/helpers/variables.scss" as *;
+@use "../styles/helpers/mixins.scss" as *;
+
+.preferences {
+
+    .standard-content__wrapper {
+        display: grid;
+        padding: 20px;
+        @include theme-property("background-color", $color-ivory, $color-primary);
+        gap: 20px;
+
+        @media (min-width: $mq-tablet) {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        @media (min-width: $mq-desktop) {
+            padding: 50px 30px;
+        }
+    }
+
+    &__row {    
+        margin: 20px 0 0;
+        border-top: 1px solid;
+        @include theme-property("border-color", $color-border-light, $color-border-faint);
+        padding: 20px 0 0;
+
+        &-title {
+            @include font-rem(14);
+            font-weight: $weight-bold;
+            @include theme-property("color", $color-primary, $color-ivory);
+        }
+
+        &-content {
+            @include font-rem(12);
+            @include theme-property("color", $color-grey, $color-ivory);
+        }
+
+        &:first-of-type {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+
+        @media (min-width: $mq-desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        //custom rows
+        &--flex {
+            .row {
+                margin: 20px 0 0;
+                border-top: 1px solid;
+                @include theme-property("border-color", $color-border-light, $color-border-faint);
+                padding: 20px 0 0;
+
+                &:first-child {
+                    margin: 0;
+                    border: 0;
+                    padding-top: 0;
+
+                    @media (min-width: $mq-desktop) {
+                        padding-right: 30px;
+                    }
+                }
+
+                &:last-child {
+                    @media (min-width: $mq-desktop) {
+                        padding-left: 30px;
+                    }
+                }
+
+                @media (min-width: $mq-desktop) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0;
+                    border: 0;
+                    padding: 0;
+                    width: 50%;
+                }
+            }
+
+            @media (min-width: $mq-desktop) {
+                justify-content: initial;
+            }
+        }
+
+        &--no-flex {
+            @media (min-width: $mq-desktop) {
+                display: block;
+            }
+        }
+
+        &--units {
+            .preferences__buttons {
+                @media (min-width: $mq-desktop) {
+                    margin: 0;
+                }
+            }
+        }
+
+        &--meal-shopping, &--weekly-goal {
+            .row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0 0;
+        gap: 8px;
+    }
+
+    .profile {
+        display: flex;
+
+        &__image {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+        }
+
+        &__content {
+            margin: 0 0 0 10px;
+        }
+
+        &__name {
+            @include font-rem(16);
+            @include theme-property("color", $color-primary, $color-ivory);
+        }
+
+        &__email {
+            @include font-rem(14);
+            @include theme-property("color", $color-grey, $color-ivory);
+        }
+    }
+
+    .content__groups {
+        display: grid;
+        gap: 20px;
+
+        &:first-child {
+            @media (min-width: $mq-desktop) {
+                grid-template-rows: 1fr 1fr;
+            }
+        }
+
+        &:last-child {
+            @media (min-width: $mq-desktop) {
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width: $mq-tablet) {
+            gap: 30px;
+        }
+    }
+}

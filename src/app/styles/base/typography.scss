@@ -1,0 +1,65 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+
+.heading {
+  &-1, &-2, &-3 {
+    font-weight: $weight-heavy;
+    line-height: 1;
+  }
+
+  &-1 {
+    @include font-rem(35);
+
+    @media (min-width: $mq-tablet) {
+      @include font-rem(42);
+    }
+
+    @media (min-width: $mq-desktop) {
+      @include font-rem(60);
+    }
+  }
+
+  &-2 {
+    @include font-rem(18);
+    
+    @media (min-width: $mq-tablet) {
+      @include font-rem(20);
+    }
+  }
+
+  &-3 {
+    @include font-rem(14);
+
+    @media (min-width: $mq-tablet) {
+      @include font-rem(16);
+    }
+
+    @media (min-width: $mq-desktop) {
+      @include font-rem(18);
+    }
+  }
+} 
+
+h1 {
+  @extend .heading-1;
+}
+
+h2 {
+  @extend .heading-2;
+}
+
+h3 {
+  @extend .heading-3;
+}
+
+p {
+  @include font-rem(16);
+
+  @media (min-width: $mq-desktop) {
+    @include font-rem(18);
+  }
+}
+
+a {
+  text-decoration: none;
+}

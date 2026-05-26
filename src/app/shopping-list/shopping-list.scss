@@ -1,0 +1,213 @@
+@use "../styles/helpers/variables.scss" as *;
+@use "../styles/helpers/mixins.scss" as *;
+
+.shopping-list {
+
+    .standard-content {
+        &__layout {
+            margin: 0;
+        }
+
+        &__view {
+            @media (min-width: $mq-desktop) {
+                padding: 0 20px 0 0;
+            }
+        }
+    }
+
+    &__wrapper {
+        @media (min-width: $mq-desktop) {
+            display: flex;
+            flex: 1;
+            min-height: 0;
+        }
+    }
+
+    .week {
+        margin: 50px 0 0;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
+    &__generate-date {
+        display: flex;
+        align-items: center;
+
+        p {
+            @include font-rem(14);
+            @include theme-property("color", $color-grey, $color-ivory);
+
+            @media (min-width: $mq-desktop) {
+                @include font-rem(18);
+            }
+        }
+
+        hr {
+            flex: 1;
+            margin: 0 0 0 10px;
+            @include theme-property("border-color", $color-border-light, $color-border-faint);
+
+            @media (min-width: $mq-tablet) {
+                margin: 0 10px;
+            }
+
+            @media (min-width: $mq-tablet) {
+                margin: 0 20px;
+            }
+        }
+
+        @media (min-width: $mq-tablet) {
+            flex: 1;
+        }
+    }
+
+    &__controls {
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 10px 0 0;
+            gap: 20px;
+
+            @media (min-width: $mq-tablet) {
+                margin: 0;
+            }
+        }
+        
+        @media (min-width: $mq-tablet) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .list {
+        margin: 20px 0 0;
+
+        &__wrapper {
+            margin: 30px 0 0;
+
+            @media (min-width: $mq-desktop) {
+                margin: 50px 0 0;
+            }
+        } 
+
+        &__heading {
+            @include theme-property("color", $color-primary, $color-ivory);
+        }
+
+        &__item {
+            margin: 20px 0 0;
+            border-top: 1px solid;
+            @include theme-property("border-color", $color-border-light, $color-border-faint);
+            padding: 20px 0 0;
+
+            &:first-child {
+                margin: 0;
+                border: 0;
+                padding: 0;
+            }
+        }
+
+        @media (min-width: $mq-desktop) {
+            margin: 30px 0 0;
+        }
+    }
+    
+    .sidebar {
+        position: relative;
+        border-left: 1px solid;
+        @include theme-property("border-color", transparent, $color-border-faint);
+        padding: 30px 20px;
+        background-color: $color-primary;
+
+        &__close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 50%;
+            @include theme-property("border-color", transparent, $color-border-faint);
+            width: 30px;
+            height: 30px;
+            background-color: $color-secondary;
+            cursor: pointer;
+
+            svg {
+                width: 10px;
+                height: auto;
+            }
+
+            @media (min-width: $mq-tablet) {
+                top: 30px;
+                right: 30px;
+            }
+        }
+
+        &__heading {
+            display: flex;
+            font-weight: $weight-bold;
+            color: $color-tertiary;
+            text-transform: uppercase;
+
+            svg {
+                margin: 0 10px 0 0;
+                width: 16px;
+            }
+        }
+
+        &__subheading {
+            margin: 20px 0 0;
+            @include font-rem(14);
+            color: $color-ivory;
+        }
+
+        &__content {
+            margin: 20px 0 0;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: $color-secondary;
+
+            &-header {
+                @include font-rem(14);
+                color: $color-ivory;
+            }
+        }
+
+        &__items {
+            margin: 20px 0 0;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0 0;
+
+            svg {
+                margin: 0 10px 0 0;
+                width: 16px;
+            }
+
+            p {
+                color: $color-ivory;
+            }
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+
+        @media (min-width: $mq-tablet) {
+            padding: 30px;
+        }
+
+        @media (min-width: $mq-desktop) {
+            padding: 80px 30px 50px;
+            width: 320px;
+        }
+    }
+}

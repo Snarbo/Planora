@@ -1,0 +1,76 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+@use 'sass:color';
+
+.button {
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-family: var(--font-nexa), sans-serif;
+    @include font-rem(12);
+    font-weight: $weight-bold;
+    line-height: 1;
+    transition: $trans-fast;
+    cursor: pointer;
+
+    &--primary {
+        border-color: $color-primary;
+        background-color: $color-primary;
+        color: $color-tertiary;
+
+        &:hover {
+            border-color: $color-secondary;
+            background-color: $color-secondary;
+        }
+    }
+
+    &--secondary {
+        @include theme-property("border-color", $color-secondary, $color-primary);
+        @include theme-property("background-color", $color-secondary, $color-primary);
+        color: $color-ivory;
+
+        &:hover {
+            @include theme-property("border-color", $color-primary, $color-tertiary);
+        }
+    }
+
+    &--tertiary {
+        @include theme-property("border-color", $color-border-light, $color-border-faint);
+        background-color: transparent;
+        @include theme-property("color", $color-primary, $color-ivory);
+
+        &.button--active, &:hover {
+            @include theme-property("border-color", $color-primary, $color-tertiary);
+            @include theme-property("background-color", $color-primary, transparent);
+            color: $color-tertiary;
+        }
+    }   
+
+    &--icon {
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+            margin: 0 10px 0 0;
+            width: 16px;
+        }
+    }
+
+    &--filter {
+        border-radius: 20px;
+        @include theme-property("border-color", $color-border-dark, $color-border-faint);
+        background-color: transparent;
+        @include theme-property("color", $color-primary, $color-ivory);
+
+        &.button--active, &:hover {
+            @include theme-property("border-color", $color-primary, $color-tertiary);
+            @include theme-property("background-color", $color-primary, transparent);
+            color: $color-tertiary;
+        }
+    }
+
+    @media (min-width: $mq-tablet) {
+        @include font-rem(14);
+    }
+}

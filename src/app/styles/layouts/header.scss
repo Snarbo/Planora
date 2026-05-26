@@ -1,0 +1,62 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-primary; 
+    z-index: 999;
+
+    &__wrapper {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 20px;
+        
+        @media (min-width: $mq-tablet) {
+            padding: 20px 30px;
+        }
+    }
+
+    &__link {
+        margin: 0 auto 0 0;
+    }
+
+    &__logo {
+        display: block;
+    }
+
+    &__hamburger {
+        margin: 0 0 0 20px;
+    }
+
+    &__account {
+        margin: 0 0 0 20px;
+        border: 1px solid $color-ivory;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        background-color: $color-secondary;
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+
+    &__navigation {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    @media (min-width: $mq-desktop) {
+        position: initial;
+        border-right: 1px solid;
+        width: 320px;
+        @include theme-property("border-color", transparent, rgba(255,255,255, .1));
+    }
+}

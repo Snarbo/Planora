@@ -1,0 +1,63 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  font-family: var(--font-nexa), sans-serif;
+  
+  @media (min-width: $mq-desktop) {
+    display: flex;
+    overflow: hidden;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: $header-mobile;
+  min-height: 100vh;
+
+  @media (min-width: $mq-tablet) {
+    padding-top: $header-tablet;
+  }
+
+  @media (min-width: $mq-desktop) {
+    flex: 1;
+    padding: 0;
+  }
+}
+
+img {
+  object-fit: cover;
+}
+
+.scrollable {
+  flex: 1;
+
+  @media (min-width: $mq-desktop) {
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+  }
+}

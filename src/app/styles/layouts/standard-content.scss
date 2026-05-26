@@ -1,0 +1,95 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+
+.standard-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        @media (min-width: $mq-desktop) {
+            padding: 50px 30px;
+            @include theme-property("background-color", $color-ivory, $color-primary);
+            min-height: 0;
+        }
+    }
+
+    &__layout {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        @media (min-width: $mq-desktop) {
+            margin: 50px 0 0;
+            border: 1px solid;
+            @include theme-property("border-color", $color-border-light, $color-border-faint);
+            border-radius: 10px;
+            padding: 30px;
+            @include theme-property("background-color", $color-white, $color-secondary);  
+            min-height: 0;   
+        }
+    }
+
+    &__view {
+        padding: 20px;
+        @include theme-property("background-color", $color-white, $color-secondary);  
+
+        @media (min-width: $mq-tablet) {
+            padding: 30px;
+        }
+
+        @media (min-width: $mq-desktop) {
+            padding: 0;
+        }
+    }
+
+    .content {
+
+        &__group {
+            border: 1px solid;
+            @include theme-property("border-color", $color-border-light, $color-border-faint);
+            border-radius: 10px;
+            padding: 20px;
+            @include theme-property("background-color", $color-white, $color-secondary); 
+
+            @media (min-width: $mq-desktop) {
+                padding: 30px;
+            }
+        }
+        
+        &__title {
+            margin: 0 0 20px;
+            @include theme-property("color", $color-primary, $color-ivory); 
+        }
+
+        &__edit {
+            margin: 20px 0 0;
+
+            input[type="file"] {
+                display: none;
+            }
+
+            @media (min-width: $mq-desktop) {
+                margin: 0;
+            }
+        }
+
+        &__input-suffix {
+            display: flex;
+            align-items: center;
+
+            .input__suffix {
+                margin: 0 0 0 8px;
+                @include theme-property("color", $color-primary, $color-ivory); 
+            }
+        }
+    }
+
+    @media (min-width: $mq-desktop) {
+        height: 100vh;
+    }
+}

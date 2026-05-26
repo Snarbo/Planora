@@ -1,0 +1,22 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 15px 20px;
+    @include theme-property("background-color", $color-tertiary, $color-dark-blue);
+
+    .button {
+        margin: 0 0 0 20px;
+
+        &:hover {
+            @include theme-property("border-color", $color-primary, $color-tertiary);
+        }
+    }
+
+    @media (min-width: $mq-tablet) {
+        padding: 15px 30px;
+    }
+}

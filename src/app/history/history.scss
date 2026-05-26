@@ -1,0 +1,200 @@
+@use "../styles/helpers/variables.scss" as *;
+@use "../styles/helpers/mixins.scss" as *;
+
+.history {
+
+    .standard-content__view {
+        @media (min-width: $mq-desktop) {
+            padding: 0 20px 0 0;
+        }
+    }
+
+    .filter {
+        padding: 0 20px 20px;
+        @include theme-property("background-color", $color-ivory, $color-primary);
+
+        @media (min-width: $mq-tablet) {
+            padding: 0 30px 30px;
+        }
+
+        @media (min-width: $mq-desktop) {
+            margin: 50px 0 0;
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+
+    .weeks {
+        display: grid;
+        gap: 20px;
+
+        @media (min-width: $mq-tablet) {
+            gap: 50px;
+        }
+    }
+
+    .week {
+        &__heading {
+            display: flex;
+            align-items: center;
+
+            .date, .kcal {
+                @include font-rem(14);
+                @include theme-property("color", $color-grey, $color-ivory);
+
+                @media (min-width: $mq-desktop) {
+                    @include font-rem(18);
+                }
+            }
+
+            .date span {
+                display: none;
+
+                @media (min-width: $mq-desktop) {
+                    display: inline-block;
+                }
+            }
+
+            .kcal span {
+                font-weight: $weight-heavy;
+            }
+
+            hr {
+                flex: 1;
+                margin: 0 10px;
+                @include theme-property("border-color", $color-border-light, $color-border-faint);
+
+                @media (min-width: $mq-tablet) {
+                    margin: 0 20px;
+                }
+            }
+        }
+
+        &__days {           
+            margin: 20px 0 0;   
+            
+            @media (min-width: $mq-tablet) {
+                margin: 30px 0 0; 
+            }
+        }
+
+        &__day {
+            margin: 20px 0 0;
+            border-top: 1px solid $color-border-dark;
+            padding: 20px 0 0;
+
+            .day, .date {
+                @include font-rem(14);
+
+                @media (min-width: $mq-desktop) {
+                    @include font-rem(18);
+                }
+            }
+
+            .day {
+                font-weight: $weight-heavy;
+                @include theme-property("color", $color-primary, $color-ivory);
+            }
+
+            .date {
+                margin: 4px 0 0;
+                @include theme-property("color", $color-grey, $color-ivory);
+            }
+
+            .today {
+                display: block;
+                margin: 8px 0 0;
+                border-radius: 5px;
+                padding: 4px 8px;
+                width: fit-content;
+                @include font-rem(12);
+                font-weight: $weight-bold;
+                background-color: $color-tertiary;
+                color: $color-primary;
+
+                @media (min-width: $mq-desktop) {
+                    @include font-rem(14);
+                }
+            }
+
+            .progress {
+                display: flex;
+                align-items: center;
+                margin: 20px 0 0;
+                line-height: 1;
+
+                &__bar {
+                    margin: 0 20px 0 0;
+                    flex: 1;
+                    height: 3px;
+                    appearance: none;
+
+                    &::-webkit-progress-bar, &::-webkit-progress-value, &::-moz-progress-bar {
+                        border-radius: 20px;
+                    }
+                  
+                    &::-webkit-progress-bar {     
+                        @include theme-property("background-color", $color-grey, $color-primary);
+                    }
+
+                    &::-webkit-progress-value {
+                        background-color: $color-tertiary;
+                    }
+
+                    &::-moz-progress-bar {
+                        background-color: $color-tertiary;
+                    }
+                }
+
+                p {
+                    @include font-rem(14);
+                    @include theme-property("color", $color-grey, $color-ivory);
+                }
+
+                @media (min-width: $mq-tablet) {
+                    margin: 30px 0 0;
+                } 
+            }
+
+            &-content {
+               @media (min-width: $mq-tablet) {
+                    display: flex;
+                    flex-direction: column;
+                    grid-column: span 1;
+                } 
+            }
+
+            &-meals {
+                display: grid;
+                gap: 10px;
+                margin: 20px 0 0;
+                height: min-content;
+
+                @media (min-width: $mq-tablet) {
+                    grid-template-columns: repeat(2, 1fr);
+                    margin: 0;
+                    grid-column: span 3;
+                    gap: 20px 30px;
+                }
+
+                @media (min-width: $mq-desktop) {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            &:first-child {
+                margin: 0;
+                border: 0;
+                padding: 0;
+            }
+
+            @media (min-width: $mq-tablet) {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+                margin: 30px 0 0;
+                padding: 30px 0 0;
+            }
+        }
+    }
+}

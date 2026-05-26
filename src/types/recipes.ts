@@ -1,0 +1,1 @@
+export type RecipeFilters = "vegan" | "30Mins" | "highProtein";

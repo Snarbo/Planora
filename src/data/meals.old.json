@@ -1,0 +1,4455 @@
+[
+  {
+    "id": "meal_1",
+    "name": "Chicken & Rice Bowl",
+    "mealType": "lunch",
+    "cookingTime": 25,
+    "dietTypes": "",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      },
+      {
+        "name": "sesame seeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "broccoli",
+        "category": "produce"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 520,
+      "protein": 42,
+      "carbs": 58,
+      "fat": 14,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_2",
+    "name": "Greek Yoghurt & Berries",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "greek yoghurt",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "blueberries",
+        "category": "produce"
+      },
+      {
+        "name": "strawberries",
+        "category": "produce"
+      },
+      {
+        "name": "raspberries",
+        "category": "produce"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "granola",
+        "category": "grains & bread"
+      }
+    ],
+    "nutrition": {
+      "kcal": 310,
+      "protein": 22,
+      "carbs": 28,
+      "fat": 10,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_3",
+    "name": "Salmon & Sweet Potato",
+    "mealType": "dinner",
+    "cookingTime": 35,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "fish"
+    ],
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "sweet potato",
+        "category": "produce"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "lemon",
+        "category": "produce"
+      },
+      {
+        "name": "fresh dill",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 610,
+      "protein": 48,
+      "carbs": 45,
+      "fat": 26,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_4",
+    "name": "Protein Oats",
+    "mealType": "breakfast",
+    "cookingTime": 10,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "rolled oats",
+        "category": "grains & bread"
+      },
+      {
+        "name": "protein powder",
+        "category": "plant-based protein"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "banana",
+        "category": "produce"
+      },
+      {
+        "name": "peanut butter",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "chia seeds",
+        "category": "nuts & seeds"
+      }
+    ],
+    "nutrition": {
+      "kcal": 430,
+      "protein": 30,
+      "carbs": 52,
+      "fat": 12,
+      "fibre": 8
+    }
+  },
+  {
+    "id": "meal_5",
+    "name": "Turkey Wrap",
+    "mealType": "lunch",
+    "cookingTime": 15,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "flour tortilla",
+        "category": "grains & bread"
+      },
+      {
+        "name": "turkey breast slices",
+        "category": "meat"
+      },
+      {
+        "name": "lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "tomato",
+        "category": "produce"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "mayonnaise",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "mustard",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      }
+    ],
+    "nutrition": {
+      "kcal": 480,
+      "protein": 36,
+      "carbs": 42,
+      "fat": 16,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_6",
+    "name": "Avocado Toast & Eggs",
+    "mealType": "breakfast",
+    "cookingTime": 12,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "eggs",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "sourdough bread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 390,
+      "protein": 18,
+      "carbs": 30,
+      "fat": 22,
+      "fibre": 9
+    }
+  },
+  {
+    "id": "meal_7",
+    "name": "Beef Stir Fry",
+    "mealType": "dinner",
+    "cookingTime": 30,
+    "dietTypes": "",
+    "allergyTypes": [
+      "soy"
+    ],
+    "ingredients": [
+      {
+        "name": "beef sirloin",
+        "category": "meat"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "sesame oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "broccoli",
+        "category": "produce"
+      },
+      {
+        "name": "snap peas",
+        "category": "produce"
+      },
+      {
+        "name": "cornstarch",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 640,
+      "protein": 46,
+      "carbs": 50,
+      "fat": 24,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_8",
+    "name": "Tuna Pasta Salad",
+    "mealType": "lunch",
+    "cookingTime": 20,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "fish",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "pasta",
+        "category": "grains & bread"
+      },
+      {
+        "name": "canned tuna",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "mayonnaise",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "sweetcorn",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "celery",
+        "category": "produce"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 550,
+      "protein": 38,
+      "carbs": 56,
+      "fat": 18,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_9",
+    "name": "Banana Protein Smoothie",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "banana",
+        "category": "produce"
+      },
+      {
+        "name": "protein powder",
+        "category": "plant-based protein"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "greek yoghurt",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "peanut butter",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "ice cubes",
+        "category": "stock & other"
+      }
+    ],
+    "nutrition": {
+      "kcal": 360,
+      "protein": 32,
+      "carbs": 35,
+      "fat": 9,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_10",
+    "name": "Chicken Caesar Salad",
+    "mealType": "lunch",
+    "cookingTime": 18,
+    "dietTypes": "",
+    "allergyTypes": [
+      "dairy",
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "romaine lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "parmesan cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "croutons",
+        "category": "grains & bread"
+      },
+      {
+        "name": "caesar dressing",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      }
+    ],
+    "nutrition": {
+      "kcal": 470,
+      "protein": 40,
+      "carbs": 18,
+      "fat": 26,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_11",
+    "name": "Veggie Omelette",
+    "mealType": "breakfast",
+    "cookingTime": 10,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "mushrooms",
+        "category": "produce"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh chives",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 340,
+      "protein": 24,
+      "carbs": 10,
+      "fat": 22,
+      "fibre": 3
+    }
+  },
+  {
+    "id": "meal_12",
+    "name": "Steak & Potatoes",
+    "mealType": "dinner",
+    "cookingTime": 40,
+    "dietTypes": "",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "ribeye steak",
+        "category": "meat"
+      },
+      {
+        "name": "potatoes",
+        "category": "grains & bread"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh rosemary",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh thyme",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 720,
+      "protein": 54,
+      "carbs": 48,
+      "fat": 32,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_13",
+    "name": "Quinoa Chicken Salad",
+    "mealType": "lunch",
+    "cookingTime": 22,
+    "dietTypes": "gluten-free",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "quinoa",
+        "category": "grains & bread"
+      },
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 510,
+      "protein": 39,
+      "carbs": 40,
+      "fat": 19,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_14",
+    "name": "Peanut Butter Toast",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "nuts",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "wholegrain bread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "peanut butter",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "banana",
+        "category": "produce"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "chia seeds",
+        "category": "nuts & seeds"
+      }
+    ],
+    "nutrition": {
+      "kcal": 320,
+      "protein": 14,
+      "carbs": 28,
+      "fat": 18,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_15",
+    "name": "Prawn Noodles",
+    "mealType": "dinner",
+    "cookingTime": 28,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "shellfish",
+      "soy",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "prawns",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "egg noodles",
+        "category": "grains & bread"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "sesame oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      },
+      {
+        "name": "bok choy",
+        "category": "produce"
+      },
+      {
+        "name": "chilli",
+        "category": "produce"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "oyster sauce",
+        "category": "condiments & sauces"
+      }
+    ],
+    "nutrition": {
+      "kcal": 590,
+      "protein": 41,
+      "carbs": 62,
+      "fat": 16,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_16",
+    "name": "Turkey Meatballs & Rice",
+    "mealType": "dinner",
+    "cookingTime": 32,
+    "dietTypes": "",
+    "allergyTypes": [
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "turkey mince",
+        "category": "meat"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "egg",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "breadcrumbs",
+        "category": "grains & bread"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "tomato passata",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "fresh basil",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "parmesan cheese",
+        "category": "dairy & eggs"
+      }
+    ],
+    "nutrition": {
+      "kcal": 650,
+      "protein": 50,
+      "carbs": 54,
+      "fat": 21,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_17",
+    "name": "Overnight Oats",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "rolled oats",
+        "category": "grains & bread"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "greek yoghurt",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "chia seeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "vanilla extract",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "blueberries",
+        "category": "produce"
+      },
+      {
+        "name": "banana",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 410,
+      "protein": 21,
+      "carbs": 50,
+      "fat": 13,
+      "fibre": 8
+    }
+  },
+  {
+    "id": "meal_18",
+    "name": "Chicken Burrito Bowl",
+    "mealType": "lunch",
+    "cookingTime": 25,
+    "dietTypes": "",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "black beans",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "sweetcorn",
+        "category": "produce"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "salsa",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "soured cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "lime juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli powder",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 630,
+      "protein": 44,
+      "carbs": 60,
+      "fat": 20,
+      "fibre": 9
+    }
+  },
+  {
+    "id": "meal_19",
+    "name": "Tofu Stir Fry",
+    "mealType": "dinner",
+    "cookingTime": 20,
+    "dietTypes": "vegan",
+    "allergyTypes": [
+      "soy"
+    ],
+    "ingredients": [
+      {
+        "name": "firm tofu",
+        "category": "plant-based protein"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "sesame oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "broccoli",
+        "category": "produce"
+      },
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "snap peas",
+        "category": "produce"
+      },
+      {
+        "name": "cornstarch",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      },
+      {
+        "name": "sesame seeds",
+        "category": "nuts & seeds"
+      }
+    ],
+    "nutrition": {
+      "kcal": 500,
+      "protein": 28,
+      "carbs": 46,
+      "fat": 22,
+      "fibre": 8
+    }
+  },
+  {
+    "id": "meal_20",
+    "name": "Egg Muffins",
+    "mealType": "breakfast",
+    "cookingTime": 18,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "eggs",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "mushrooms",
+        "category": "produce"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chives",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 290,
+      "protein": 23,
+      "carbs": 8,
+      "fat": 18,
+      "fibre": 2
+    }
+  },
+  {
+    "id": "meal_21",
+    "name": "BBQ Chicken Flatbread",
+    "mealType": "lunch",
+    "cookingTime": 20,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "flatbread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "BBQ sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "mozzarella cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "sweetcorn",
+        "category": "produce"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      }
+    ],
+    "nutrition": {
+      "kcal": 540,
+      "protein": 37,
+      "carbs": 49,
+      "fat": 19,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_22",
+    "name": "Chicken Alfredo Pasta",
+    "mealType": "dinner",
+    "cookingTime": 35,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "fettuccine pasta",
+        "category": "grains & bread"
+      },
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "double cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "parmesan cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "nutmeg",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 760,
+      "protein": 48,
+      "carbs": 68,
+      "fat": 31,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_23",
+    "name": "Berry Chia Pudding",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegan",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "chia seeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "almond milk",
+        "category": "dairy alternatives"
+      },
+      {
+        "name": "mixed berries",
+        "category": "produce"
+      },
+      {
+        "name": "maple syrup",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "vanilla extract",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "coconut flakes",
+        "category": "nuts & seeds"
+      }
+    ],
+    "nutrition": {
+      "kcal": 330,
+      "protein": 16,
+      "carbs": 24,
+      "fat": 18,
+      "fibre": 10
+    }
+  },
+  {
+    "id": "meal_24",
+    "name": "Ham & Cheese Toastie",
+    "mealType": "lunch",
+    "cookingTime": 10,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "white bread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "ham",
+        "category": "meat"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "mustard",
+        "category": "condiments & sauces"
+      }
+    ],
+    "nutrition": {
+      "kcal": 450,
+      "protein": 28,
+      "carbs": 34,
+      "fat": 21,
+      "fibre": 3
+    }
+  },
+  {
+    "id": "meal_25",
+    "name": "Lentil Curry",
+    "mealType": "dinner",
+    "cookingTime": 40,
+    "dietTypes": "vegan",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "red lentils",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "coconut milk",
+        "category": "dairy alternatives"
+      },
+      {
+        "name": "tinned tomatoes",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "turmeric",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "garam masala",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 570,
+      "protein": 24,
+      "carbs": 72,
+      "fat": 18,
+      "fibre": 14
+    }
+  },
+  {
+    "id": "meal_26",
+    "name": "Fruit & Nut Granola",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "nuts"
+    ],
+    "ingredients": [
+      {
+        "name": "granola",
+        "category": "grains & bread"
+      },
+      {
+        "name": "mixed nuts",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "dried cranberries",
+        "category": "produce"
+      },
+      {
+        "name": "raisins",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "banana",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 370,
+      "protein": 14,
+      "carbs": 42,
+      "fat": 16,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_27",
+    "name": "Spicy Chicken Wrap",
+    "mealType": "lunch",
+    "cookingTime": 15,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "flour tortilla",
+        "category": "grains & bread"
+      },
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "sriracha",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "tomato",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "soured cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 520,
+      "protein": 39,
+      "carbs": 44,
+      "fat": 18,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_28",
+    "name": "Fish Tacos",
+    "mealType": "dinner",
+    "cookingTime": 25,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "fish",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "white fish fillets",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "corn tortillas",
+        "category": "grains & bread"
+      },
+      {
+        "name": "cabbage",
+        "category": "produce"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "soured cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "lime juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "chilli powder",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salsa",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      }
+    ],
+    "nutrition": {
+      "kcal": 610,
+      "protein": 42,
+      "carbs": 50,
+      "fat": 24,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_29",
+    "name": "Cottage Cheese Bowl",
+    "mealType": "breakfast",
+    "cookingTime": 4,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "cottage cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "strawberries",
+        "category": "produce"
+      },
+      {
+        "name": "blueberries",
+        "category": "produce"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "flaxseeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "walnuts",
+        "category": "nuts & seeds"
+      }
+    ],
+    "nutrition": {
+      "kcal": 280,
+      "protein": 26,
+      "carbs": 16,
+      "fat": 11,
+      "fibre": 3
+    }
+  },
+  {
+    "id": "meal_30",
+    "name": "Chicken Fried Rice",
+    "mealType": "dinner",
+    "cookingTime": 30,
+    "dietTypes": "",
+    "allergyTypes": [
+      "soy",
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "cooked rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "sesame oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "peas",
+        "category": "produce"
+      },
+      {
+        "name": "sweetcorn",
+        "category": "produce"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "oyster sauce",
+        "category": "condiments & sauces"
+      }
+    ],
+    "nutrition": {
+      "kcal": 680,
+      "protein": 45,
+      "carbs": 70,
+      "fat": 22,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_31",
+    "name": "Egg & Spinach Bagel",
+    "mealType": "breakfast",
+    "cookingTime": 12,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "eggs",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "bagel",
+        "category": "grains & bread"
+      },
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "cream cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 410,
+      "protein": 24,
+      "carbs": 38,
+      "fat": 17,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_32",
+    "name": "Beef Burrito",
+    "mealType": "lunch",
+    "cookingTime": 20,
+    "dietTypes": "",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "flour tortilla",
+        "category": "grains & bread"
+      },
+      {
+        "name": "beef mince",
+        "category": "meat"
+      },
+      {
+        "name": "black beans",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "soured cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salsa",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "guacamole",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli powder",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 690,
+      "protein": 43,
+      "carbs": 66,
+      "fat": 28,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_33",
+    "name": "Teriyaki Salmon Rice",
+    "mealType": "dinner",
+    "cookingTime": 35,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "fish",
+      "soy"
+    ],
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "mirin",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "sesame seeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      },
+      {
+        "name": "sesame oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "broccoli",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 640,
+      "protein": 47,
+      "carbs": 48,
+      "fat": 27,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_34",
+    "name": "Apple Cinnamon Oats",
+    "mealType": "breakfast",
+    "cookingTime": 8,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "rolled oats",
+        "category": "grains & bread"
+      },
+      {
+        "name": "apple",
+        "category": "produce"
+      },
+      {
+        "name": "cinnamon",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "water",
+        "category": "stock & other"
+      },
+      {
+        "name": "raisins",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "walnuts",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "vanilla extract",
+        "category": "baking & sweeteners"
+      }
+    ],
+    "nutrition": {
+      "kcal": 390,
+      "protein": 19,
+      "carbs": 54,
+      "fat": 11,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_35",
+    "name": "Chicken Pesto Pasta",
+    "mealType": "lunch",
+    "cookingTime": 25,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten",
+      "dairy",
+      "nuts"
+    ],
+    "ingredients": [
+      {
+        "name": "pasta",
+        "category": "grains & bread"
+      },
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "pesto",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "parmesan cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "pine nuts",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh basil",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 620,
+      "protein": 40,
+      "carbs": 58,
+      "fat": 24,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_36",
+    "name": "Vegetable Soup & Bread",
+    "mealType": "dinner",
+    "cookingTime": 30,
+    "dietTypes": "vegan",
+    "allergyTypes": [
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "sourdough bread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "carrots",
+        "category": "produce"
+      },
+      {
+        "name": "celery",
+        "category": "produce"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "tinned tomatoes",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "vegetable stock",
+        "category": "stock & other"
+      },
+      {
+        "name": "courgette",
+        "category": "produce"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh thyme",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 460,
+      "protein": 18,
+      "carbs": 56,
+      "fat": 16,
+      "fibre": 10
+    }
+  },
+  {
+    "id": "meal_37",
+    "name": "Breakfast Burrito",
+    "mealType": "breakfast",
+    "cookingTime": 15,
+    "dietTypes": "",
+    "allergyTypes": [
+      "eggs",
+      "dairy",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "flour tortilla",
+        "category": "grains & bread"
+      },
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "bacon",
+        "category": "meat"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salsa",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "soured cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 510,
+      "protein": 31,
+      "carbs": 40,
+      "fat": 24,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_38",
+    "name": "Chicken Noodle Soup",
+    "mealType": "lunch",
+    "cookingTime": 28,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "egg noodles",
+        "category": "grains & bread"
+      },
+      {
+        "name": "chicken stock",
+        "category": "stock & other"
+      },
+      {
+        "name": "carrots",
+        "category": "produce"
+      },
+      {
+        "name": "celery",
+        "category": "produce"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "bay leaf",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 430,
+      "protein": 32,
+      "carbs": 36,
+      "fat": 14,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_39",
+    "name": "Stuffed Peppers",
+    "mealType": "dinner",
+    "cookingTime": 40,
+    "dietTypes": "gluten-free",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "beef mince",
+        "category": "meat"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "tinned tomatoes",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 560,
+      "protein": 35,
+      "carbs": 42,
+      "fat": 26,
+      "fibre": 8
+    }
+  },
+  {
+    "id": "meal_40",
+    "name": "Chocolate Protein Pancakes",
+    "mealType": "breakfast",
+    "cookingTime": 15,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "gluten",
+      "dairy",
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "plain flour",
+        "category": "grains & bread"
+      },
+      {
+        "name": "chocolate protein powder",
+        "category": "plant-based protein"
+      },
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cocoa powder",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "baking powder",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "banana",
+        "category": "produce"
+      },
+      {
+        "name": "vanilla extract",
+        "category": "baking & sweeteners"
+      }
+    ],
+    "nutrition": {
+      "kcal": 470,
+      "protein": 34,
+      "carbs": 44,
+      "fat": 16,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_41",
+    "name": "Chicken Gyro Bowl",
+    "mealType": "lunch",
+    "cookingTime": 22,
+    "dietTypes": "",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken thighs",
+        "category": "meat"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "tzatziki",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "tomato",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "kalamata olives",
+        "category": "stock & other"
+      },
+      {
+        "name": "feta cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "oregano",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 580,
+      "protein": 41,
+      "carbs": 48,
+      "fat": 21,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_42",
+    "name": "Mushroom Risotto",
+    "mealType": "dinner",
+    "cookingTime": 45,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "arborio rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "mixed mushrooms",
+        "category": "produce"
+      },
+      {
+        "name": "vegetable stock",
+        "category": "stock & other"
+      },
+      {
+        "name": "white wine",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "parmesan cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh thyme",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 620,
+      "protein": 18,
+      "carbs": 74,
+      "fat": 24,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_43",
+    "name": "Yoghurt Banana Parfait",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "greek yoghurt",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "banana",
+        "category": "produce"
+      },
+      {
+        "name": "granola",
+        "category": "grains & bread"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "mixed berries",
+        "category": "produce"
+      },
+      {
+        "name": "vanilla extract",
+        "category": "baking & sweeteners"
+      }
+    ],
+    "nutrition": {
+      "kcal": 340,
+      "protein": 20,
+      "carbs": 36,
+      "fat": 11,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_44",
+    "name": "Turkey Club Sandwich",
+    "mealType": "lunch",
+    "cookingTime": 12,
+    "dietTypes": "",
+    "allergyTypes": [
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "white bread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "turkey breast slices",
+        "category": "meat"
+      },
+      {
+        "name": "bacon",
+        "category": "meat"
+      },
+      {
+        "name": "lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "tomato",
+        "category": "produce"
+      },
+      {
+        "name": "mayonnaise",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "mustard",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 530,
+      "protein": 35,
+      "carbs": 39,
+      "fat": 23,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_45",
+    "name": "Chicken Curry & Rice",
+    "mealType": "dinner",
+    "cookingTime": 38,
+    "dietTypes": "",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken thighs",
+        "category": "meat"
+      },
+      {
+        "name": "basmati rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "coconut milk",
+        "category": "dairy alternatives"
+      },
+      {
+        "name": "tinned tomatoes",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "garam masala",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "turmeric",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli powder",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 710,
+      "protein": 46,
+      "carbs": 63,
+      "fat": 29,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_46",
+    "name": "Scrambled Eggs on Toast",
+    "mealType": "breakfast",
+    "cookingTime": 8,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "eggs",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "wholegrain bread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh chives",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 350,
+      "protein": 20,
+      "carbs": 24,
+      "fat": 18,
+      "fibre": 3
+    }
+  },
+  {
+    "id": "meal_47",
+    "name": "Mediterranean Pasta Salad",
+    "mealType": "lunch",
+    "cookingTime": 18,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "pasta",
+        "category": "grains & bread"
+      },
+      {
+        "name": "feta cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "kalamata olives",
+        "category": "stock & other"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "roasted red peppers",
+        "category": "produce"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh basil",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "oregano",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 560,
+      "protein": 26,
+      "carbs": 58,
+      "fat": 22,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_48",
+    "name": "Turkey Chilli",
+    "mealType": "dinner",
+    "cookingTime": 40,
+    "dietTypes": "",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "turkey mince",
+        "category": "meat"
+      },
+      {
+        "name": "kidney beans",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "tinned tomatoes",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli powder",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "oregano",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "chicken stock",
+        "category": "stock & other"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 640,
+      "protein": 49,
+      "carbs": 52,
+      "fat": 22,
+      "fibre": 11
+    }
+  },
+  {
+    "id": "meal_49",
+    "name": "Blueberry Protein Shake",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "blueberries",
+        "category": "produce"
+      },
+      {
+        "name": "protein powder",
+        "category": "plant-based protein"
+      },
+      {
+        "name": "milk",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "greek yoghurt",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "vanilla extract",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "ice cubes",
+        "category": "stock & other"
+      }
+    ],
+    "nutrition": {
+      "kcal": 330,
+      "protein": 30,
+      "carbs": 27,
+      "fat": 10,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_50",
+    "name": "Chicken Fajita Bowl",
+    "mealType": "lunch",
+    "cookingTime": 24,
+    "dietTypes": "",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "soured cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salsa",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "guacamole",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli powder",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "lime juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 590,
+      "protein": 43,
+      "carbs": 52,
+      "fat": 20,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_51",
+    "name": "Bacon & Avocado Eggs",
+    "mealType": "breakfast",
+    "cookingTime": 15,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "bacon",
+        "category": "meat"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh chives",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 480,
+      "protein": 28,
+      "carbs": 4,
+      "fat": 40,
+      "fibre": 3
+    }
+  },
+  {
+    "id": "meal_52",
+    "name": "Ribeye Steak & Asparagus",
+    "mealType": "dinner",
+    "cookingTime": 25,
+    "dietTypes": "keto",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "ribeye steak",
+        "category": "meat"
+      },
+      {
+        "name": "asparagus",
+        "category": "produce"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh rosemary",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      }
+    ],
+    "nutrition": {
+      "kcal": 680,
+      "protein": 52,
+      "carbs": 6,
+      "fat": 48,
+      "fibre": 3
+    }
+  },
+  {
+    "id": "meal_53",
+    "name": "Tuna & Avocado Lettuce Wraps",
+    "mealType": "lunch",
+    "cookingTime": 10,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "fish"
+    ],
+    "ingredients": [
+      {
+        "name": "canned tuna",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "iceberg lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "mayonnaise",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "celery",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein": 34,
+      "carbs": 5,
+      "fat": 30,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_54",
+    "name": "Cream Cheese Omelette",
+    "mealType": "breakfast",
+    "cookingTime": 10,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "eggs",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cream cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "chives",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      }
+    ],
+    "nutrition": {
+      "kcal": 390,
+      "protein": 24,
+      "carbs": 3,
+      "fat": 32,
+      "fibre": 1
+    }
+  },
+  {
+    "id": "meal_55",
+    "name": "Garlic Butter Chicken Thighs",
+    "mealType": "dinner",
+    "cookingTime": 30,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "chicken thighs",
+        "category": "meat"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh thyme",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh rosemary",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 620,
+      "protein": 46,
+      "carbs": 4,
+      "fat": 46,
+      "fibre": 1
+    }
+  },
+  {
+    "id": "meal_56",
+    "name": "Caprese Omelette",
+    "mealType": "breakfast",
+    "cookingTime": 12,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "eggs",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "mozzarella cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "fresh basil",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      }
+    ],
+    "nutrition": {
+      "kcal": 370,
+      "protein": 26,
+      "carbs": 6,
+      "fat": 28,
+      "fibre": 2
+    }
+  },
+  {
+    "id": "meal_57",
+    "name": "Halloumi & Roasted Veg Wrap",
+    "mealType": "lunch",
+    "cookingTime": 20,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "halloumi",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "flour tortilla",
+        "category": "grains & bread"
+      },
+      {
+        "name": "courgette",
+        "category": "produce"
+      },
+      {
+        "name": "bell peppers",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "hummus",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 530,
+      "protein": 28,
+      "carbs": 44,
+      "fat": 26,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_58",
+    "name": "Spinach & Ricotta Pasta",
+    "mealType": "dinner",
+    "cookingTime": 25,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "pasta",
+        "category": "grains & bread"
+      },
+      {
+        "name": "ricotta",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "parmesan cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "nutmeg",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh basil",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 580,
+      "protein": 26,
+      "carbs": 68,
+      "fat": 22,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_59",
+    "name": "Veggie Breakfast Bowl",
+    "mealType": "breakfast",
+    "cookingTime": 15,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "sweet potato",
+        "category": "produce"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "mushrooms",
+        "category": "produce"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein": 18,
+      "carbs": 32,
+      "fat": 26,
+      "fibre": 9
+    }
+  },
+  {
+    "id": "meal_60",
+    "name": "Black Bean Tacos",
+    "mealType": "dinner",
+    "cookingTime": 20,
+    "dietTypes": "vegetarian",
+    "allergyTypes": [
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "corn tortillas",
+        "category": "grains & bread"
+      },
+      {
+        "name": "black beans",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "soured cream",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli powder",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "lime juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 520,
+      "protein": 22,
+      "carbs": 62,
+      "fat": 20,
+      "fibre": 14
+    }
+  },
+  {
+    "id": "meal_61",
+    "name": "Avocado & Tomato Toast",
+    "mealType": "breakfast",
+    "cookingTime": 8,
+    "dietTypes": "vegan",
+    "allergyTypes": [
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "sourdough bread",
+        "category": "grains & bread"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh basil",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 340,
+      "protein": 9,
+      "carbs": 38,
+      "fat": 18,
+      "fibre": 8
+    }
+  },
+  {
+    "id": "meal_62",
+    "name": "Chickpea Buddha Bowl",
+    "mealType": "lunch",
+    "cookingTime": 25,
+    "dietTypes": "vegan",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "chickpeas",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "quinoa",
+        "category": "grains & bread"
+      },
+      {
+        "name": "sweet potato",
+        "category": "produce"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "tahini",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 540,
+      "protein": 22,
+      "carbs": 72,
+      "fat": 18,
+      "fibre": 16
+    }
+  },
+  {
+    "id": "meal_63",
+    "name": "Coconut Vegetable Curry",
+    "mealType": "dinner",
+    "cookingTime": 35,
+    "dietTypes": "vegan",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "chickpeas",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "coconut milk",
+        "category": "dairy alternatives"
+      },
+      {
+        "name": "tinned tomatoes",
+        "category": "tins & pulses"
+      },
+      {
+        "name": "sweet potato",
+        "category": "produce"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "onion",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "garam masala",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "cumin",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "turmeric",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "basmati rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "fresh coriander",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 580,
+      "protein": 18,
+      "carbs": 78,
+      "fat": 20,
+      "fibre": 14
+    }
+  },
+  {
+    "id": "meal_64",
+    "name": "Mango Chia Smoothie Bowl",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "vegan",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "mango",
+        "category": "produce"
+      },
+      {
+        "name": "banana",
+        "category": "produce"
+      },
+      {
+        "name": "almond milk",
+        "category": "dairy alternatives"
+      },
+      {
+        "name": "chia seeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "granola",
+        "category": "grains & bread"
+      },
+      {
+        "name": "mixed berries",
+        "category": "produce"
+      },
+      {
+        "name": "coconut flakes",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "maple syrup",
+        "category": "oils & liquids"
+      }
+    ],
+    "nutrition": {
+      "kcal": 380,
+      "protein": 10,
+      "carbs": 62,
+      "fat": 12,
+      "fibre": 11
+    }
+  },
+  {
+    "id": "meal_65",
+    "name": "Teriyaki Tofu & Rice",
+    "mealType": "dinner",
+    "cookingTime": 25,
+    "dietTypes": "vegan",
+    "allergyTypes": [
+      "soy"
+    ],
+    "ingredients": [
+      {
+        "name": "firm tofu",
+        "category": "plant-based protein"
+      },
+      {
+        "name": "white rice",
+        "category": "grains & bread"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "mirin",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "sesame oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "broccoli",
+        "category": "produce"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      },
+      {
+        "name": "sesame seeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "cornstarch",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "honey",
+        "category": "baking & sweeteners"
+      }
+    ],
+    "nutrition": {
+      "kcal": 510,
+      "protein": 26,
+      "carbs": 66,
+      "fat": 16,
+      "fibre": 6
+    }
+  },
+  {
+    "id": "meal_66",
+    "name": "Smoked Salmon Bagel",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "fish",
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "bagel",
+        "category": "grains & bread"
+      },
+      {
+        "name": "smoked salmon",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "cream cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "capers",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh dill",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 460,
+      "protein": 32,
+      "carbs": 44,
+      "fat": 16,
+      "fibre": 3
+    }
+  },
+  {
+    "id": "meal_67",
+    "name": "Prawn & Avocado Salad",
+    "mealType": "lunch",
+    "cookingTime": 10,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "shellfish"
+    ],
+    "ingredients": [
+      {
+        "name": "prawns",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "romaine lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 380,
+      "protein": 34,
+      "carbs": 12,
+      "fat": 22,
+      "fibre": 7
+    }
+  },
+  {
+    "id": "meal_68",
+    "name": "Cod & Chips",
+    "mealType": "dinner",
+    "cookingTime": 40,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "fish",
+      "gluten"
+    ],
+    "ingredients": [
+      {
+        "name": "white fish fillets",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "potatoes",
+        "category": "grains & bread"
+      },
+      {
+        "name": "plain flour",
+        "category": "grains & bread"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 580,
+      "protein": 44,
+      "carbs": 58,
+      "fat": 18,
+      "fibre": 5
+    }
+  },
+  {
+    "id": "meal_69",
+    "name": "Tuna Nicoise Salad",
+    "mealType": "lunch",
+    "cookingTime": 20,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "fish",
+      "eggs"
+    ],
+    "ingredients": [
+      {
+        "name": "canned tuna",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "green beans",
+        "category": "produce"
+      },
+      {
+        "name": "potatoes",
+        "category": "grains & bread"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "kalamata olives",
+        "category": "stock & other"
+      },
+      {
+        "name": "romaine lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "red onion",
+        "category": "produce"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "mustard",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 490,
+      "protein": 38,
+      "carbs": 34,
+      "fat": 22,
+      "fibre": 8
+    }
+  },
+  {
+    "id": "meal_70",
+    "name": "Garlic Butter Prawn Pasta",
+    "mealType": "dinner",
+    "cookingTime": 20,
+    "dietTypes": "pescatarian",
+    "allergyTypes": [
+      "shellfish",
+      "gluten",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "prawns",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "pasta",
+        "category": "grains & bread"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "white wine",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh parsley",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "parmesan cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 620,
+      "protein": 42,
+      "carbs": 64,
+      "fat": 22,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_71",
+    "name": "Smoked Salmon & Avocado Plate",
+    "mealType": "breakfast",
+    "cookingTime": 5,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "fish",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "smoked salmon",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "cream cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "cucumber",
+        "category": "produce"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh dill",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "capers",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 420,
+      "protein": 28,
+      "carbs": 5,
+      "fat": 34,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_72",
+    "name": "Chicken & Avocado Lettuce Wraps",
+    "mealType": "lunch",
+    "cookingTime": 15,
+    "dietTypes": "keto",
+    "allergyTypes": [],
+    "ingredients": [
+      {
+        "name": "chicken breast",
+        "category": "meat"
+      },
+      {
+        "name": "iceberg lettuce",
+        "category": "produce"
+      },
+      {
+        "name": "avocado",
+        "category": "produce"
+      },
+      {
+        "name": "bacon",
+        "category": "meat"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "mayonnaise",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh chives",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 480,
+      "protein": 42,
+      "carbs": 6,
+      "fat": 32,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_73",
+    "name": "Baked Salmon with Asparagus",
+    "mealType": "dinner",
+    "cookingTime": 25,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "fish",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "category": "fish & seafood"
+      },
+      {
+        "name": "asparagus",
+        "category": "produce"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "lemon juice",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "fresh dill",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "olive oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "paprika",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 560,
+      "protein": 48,
+      "carbs": 6,
+      "fat": 38,
+      "fibre": 4
+    }
+  },
+  {
+    "id": "meal_74",
+    "name": "Egg & Bacon Cups",
+    "mealType": "breakfast",
+    "cookingTime": 20,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "eggs",
+      "dairy"
+    ],
+    "ingredients": [
+      {
+        "name": "eggs",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "bacon",
+        "category": "meat"
+      },
+      {
+        "name": "cheddar cheese",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "spinach",
+        "category": "produce"
+      },
+      {
+        "name": "cherry tomatoes",
+        "category": "produce"
+      },
+      {
+        "name": "butter",
+        "category": "dairy & eggs"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "chilli flakes",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 410,
+      "protein": 30,
+      "carbs": 3,
+      "fat": 32,
+      "fibre": 1
+    }
+  },
+  {
+    "id": "meal_75",
+    "name": "Beef & Broccoli Bowl",
+    "mealType": "dinner",
+    "cookingTime": 20,
+    "dietTypes": "keto",
+    "allergyTypes": [
+      "soy"
+    ],
+    "ingredients": [
+      {
+        "name": "beef sirloin",
+        "category": "meat"
+      },
+      {
+        "name": "broccoli",
+        "category": "produce"
+      },
+      {
+        "name": "garlic",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "ginger",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "soy sauce",
+        "category": "condiments & sauces"
+      },
+      {
+        "name": "sesame oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "vegetable oil",
+        "category": "oils & liquids"
+      },
+      {
+        "name": "spring onions",
+        "category": "produce"
+      },
+      {
+        "name": "sesame seeds",
+        "category": "nuts & seeds"
+      },
+      {
+        "name": "cornstarch",
+        "category": "baking & sweeteners"
+      },
+      {
+        "name": "salt",
+        "category": "herbs & spices"
+      },
+      {
+        "name": "black pepper",
+        "category": "herbs & spices"
+      }
+    ],
+    "nutrition": {
+      "kcal": 520,
+      "protein": 46,
+      "carbs": 8,
+      "fat": 34,
+      "fibre": 4
+    }
+  }
+]

@@ -1,0 +1,14 @@
+@use "./variables.scss" as *;
+
+@mixin font-rem($px) {
+  font-size: calc(#{$px} / 16 * 1rem);
+}
+
+@mixin theme-property($property, $light, $dark) {
+    #{$property}: $light;
+    transition: $trans-fast;
+
+    .theme-dark & {
+        #{$property}: $dark;
+    }
+}

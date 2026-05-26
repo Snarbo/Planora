@@ -1,0 +1,39 @@
+@use "../styles/helpers/variables.scss" as *;
+@use "../styles/helpers/mixins.scss" as *;
+
+.recipes {
+
+    .filter {
+        padding: 20px;
+        @include theme-property("background-color", $color-ivory, $color-primary);
+
+        @media (min-width: $mq-tablet) {
+            padding: 30px;
+        }
+
+        @media (min-width: $mq-desktop) {
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+
+    .standard-content__view {
+        @media (min-width: $mq-desktop) {
+            padding: 0 20px 0 0;
+        }
+    }
+
+    .recipes {
+        display: grid;
+        gap: 20px;
+
+        @media (min-width: $mq-tablet) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        @media (min-width: $mq-desktop) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }   
+}

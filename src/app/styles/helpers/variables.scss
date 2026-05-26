@@ -1,0 +1,41 @@
+//colours
+$color-white: #FFFFFF;
+$color-midnight: #0A0F1F;
+$color-ivory: #FBF8E9;
+$color-cream: #FAEEDA;
+$color-light-grey: #E5E7EB;
+$color-grey: #6B7280;
+$color-mint: #86EFAC;
+$color-green: #22C55E;
+$color-light-blue: #E1F5EE;
+$color-blue: #60A5FA;
+$color-dark-blue: #1A2138;
+$color-orange: #F59E0B;
+$color-pink: #F7A2A2;
+$color-red: #EF4444;
+
+$color-primary: $color-midnight;
+$color-secondary: $color-dark-blue;
+$color-tertiary: $color-mint;
+
+$color-success: $color-green;
+$color-warning: $color-orange;
+$color-error: $color-red;
+
+$color-border-faint: rgba(255, 255, 255, .1);
+$color-border-light: $color-light-grey;
+$color-border-dark: $color-grey;
+
+//typography
+$weight-bold: 700;
+$weight-heavy: 900;
+$weight-regular: 400;
+
+//breakpoints
+$mq-tablet: 768px;
+$mq-desktop: 1920px;
+
+//misc 
+$header-mobile: 65px;
+$header-tablet: 76px;
+$trans-fast: .2s ease;

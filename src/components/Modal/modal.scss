@@ -1,0 +1,104 @@
+@use "../../app/styles/helpers/variables.scss" as *;
+@use "../../app/styles/helpers/mixins.scss" as *;
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+
+    &__backdrop, &__content {
+        position: absolute;
+    }
+
+    &__backdrop { 
+        inset: 0;
+        @include theme-property("background-color", rgba(0, 0, 0, .8), rgba(0, 0, 0, .5));
+    }
+
+    &__content {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);    
+        border-radius: 10px;
+        padding: 20px;
+        width: min(600px, 90vw);
+        background-color: $color-white;   
+        z-index: 2;
+
+        @media (min-width: $mq-tablet) {
+            padding: 30px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 20px;
+
+        @media (min-width: $mq-tablet) {
+            margin: 0 0 30px;
+        }
+    }
+
+    &__title {
+        color: $color-primary;
+    }
+
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        border-radius: 50%;
+        @include theme-property("border-color", transparent, $color-border-faint);
+        width: 30px;
+        height: 30px;
+        background-color: $color-primary;
+        cursor: pointer;
+
+        svg {
+            width: 10px;
+            height: auto;
+        }
+    }
+
+    &__dropdown {
+        .modal {
+
+            &__items {
+                display: flex; 
+                flex-wrap: wrap;
+                margin: 20px 0 0;
+                gap: 10px;
+            }
+
+            &__item {
+                display: flex;
+                border: 0;
+                border-radius: 5px;          
+                padding: 8px;
+                background-color: $color-secondary;
+                transition: $trans-fast;
+                cursor: pointer;
+
+                &-name, &-meta {
+                    @include font-rem(14);
+                    color: $color-ivory;
+                }
+
+                &-name {
+                    font-weight: $weight-bold;
+                }
+
+                &-meta {
+                    margin: 0 0 0 10px;
+                }
+
+                &:hover {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+}
