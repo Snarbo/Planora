@@ -64,6 +64,10 @@
         &__title {
             margin: 0 0 20px;
             @include theme-property("color", $color-primary, $color-ivory); 
+
+            @media (min-width: $mq-desktop) {
+                margin: 0 0 30px;
+            }
         }
 
         &__edit {

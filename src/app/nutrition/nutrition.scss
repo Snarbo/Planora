@@ -1,0 +1,36 @@
+@use "../styles/helpers/variables.scss" as *;
+@use "../styles/helpers/mixins.scss" as *;
+
+.nutrition {
+
+    .content__groups {
+        display: grid;
+        gap: 20px;
+        padding: 20px;
+        @include theme-property("background-color", $color-ivory, $color-primary);
+
+        @media (min-width: $mq-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media (min-width: $mq-desktop) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 30px 0 0;
+            padding: 0;
+        }
+    }
+
+    .content__group {
+        p {
+            margin: 20px 0 0;
+            @include font-rem(12);
+            @include theme-property("color", $color-primary, $color-ivory);
+
+            @media (min-width: $mq-desktop) {
+                @include font-rem(14);
+            }
+        }
+    }
+}

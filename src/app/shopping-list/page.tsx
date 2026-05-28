@@ -332,7 +332,7 @@ export default function ShoppingList() {
                       </label>
                       {AIIngredientsSwaps && (
                         <button
-                          className={`button button--secondary${isActive ? " button--active" : ""}`}
+                          className={`button button--tertiary ${isActive ? " button--active" : ""}`}
                           onClick={() => handleSwap(name)}
                         >
                           swap
