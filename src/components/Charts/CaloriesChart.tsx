@@ -46,7 +46,6 @@ export function CaloriesChart({ data }: CaloriesChartProps) {
       const kcal = totals[i];
 
       bar.classList.remove("bar--on-target", "bar--over-target");
-      bar.style.height = "0%";
 
       if (kcal === null) return;
 

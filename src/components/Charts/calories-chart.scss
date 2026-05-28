@@ -2,57 +2,57 @@
 @use "../../app/styles/helpers/mixins.scss" as *;
 
 .calories-chart {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
 
-        .day {
+    .day {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bar {
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        width: 100%;
+        height: 0;
+        background-color: $color-grey;
+        transition: $trans-fast;
+
+        &__wrapper {
             display: flex;
-            flex-direction: column;
-        }
+            align-items: flex-end;
+            flex: 1;
+            min-height: 70px;
 
-        .bar {
-            border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
-            width: 100%;
-            height: 0;
-            background-color: $color-grey;
-            transition: $trans-fast;
-
-            &__wrapper {
-                display: flex;
-                align-items: flex-end;
-                flex: 1;
-                min-height: 70px;
-
-                @media (min-width: $mq-tablet) {
-                    min-height: 100px;
-                }
-
-                @media (min-width: $mq-desktop) {
-                    min-height: 140px;
-                }
+            @media (min-width: $mq-tablet) {
+                min-height: 100px;
             }
 
-            &--on-target {
-                background-color: $color-tertiary;
-            }
-
-            &--over-target {
-                background-color: $color-error;
+            @media (min-width: $mq-desktop) {
+                min-height: 140px;
             }
         }
 
-        label {
-            margin: 10px 0 0;
-            @include font-rem(12);
-            font-weight: $weight-heavy;
-            line-height: 1;
-            text-align: center;
-            @include theme-property("color", $color-primary, $color-ivory);
+        &--on-target {
+            background-color: $color-tertiary;
         }
 
-        @media (min-width: $mq-desktop) {
-            gap: 15px;
+        &--over-target {
+            background-color: $color-error;
         }
     }
+
+    label {
+        margin: 10px 0 0;
+        @include font-rem(12);
+        font-weight: $weight-heavy;
+        line-height: 1;
+        text-align: center;
+        @include theme-property("color", $color-primary, $color-ivory);
+    }
+
+    @media (min-width: $mq-desktop) {
+        gap: 15px;
+    }
+}

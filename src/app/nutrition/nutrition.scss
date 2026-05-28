@@ -23,14 +23,25 @@
     }
 
     .content__group {
-        p {
+        display: flex;
+        flex-direction: column;
+
+        .text {
             margin: 20px 0 0;
             @include font-rem(12);
             @include theme-property("color", $color-primary, $color-ivory);
 
-            @media (min-width: $mq-desktop) {
+            @media (min-width: $mq-tablet) {
                 @include font-rem(14);
             }
+
+            &__wrapper {
+                margin: auto 0 0;
+            }
+        }
+
+        &--macro .macro-chart {
+            flex: 1;
         }
     }
 }

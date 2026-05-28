@@ -1,0 +1,59 @@
+@use "../../app/styles/helpers/variables.scss" as *;
+@use "../../app/styles/helpers/mixins.scss" as *;
+
+.macro-chart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  &__donut {
+    width: 100%;
+    max-width: 77px;
+    aspect-ratio: 1;
+    display: block;
+    overflow: visible;
+
+    @media (min-width: $mq-tablet) {
+      max-width: 100px;
+    }
+
+    @media (min-width: $mq-desktop) {
+      max-width: 135px;
+    }
+  }
+
+  &__legend {
+    &-item {
+      display: flex;
+      align-items: center;
+      margin: 8px 0 0;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &-dot {
+      margin: 0 8px 0 0;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    &-label, &-value {
+      @include font-rem(14);
+      @include theme-property("color", $color-primary, $color-ivory);
+    }
+
+    &-label {
+      margin: 0 8px 0 0;
+      font-weight: $weight-heavy;
+    }
+  }
+
+  @media (min-width: $mq-tablet) {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
