@@ -127,6 +127,11 @@
         padding: 30px 20px;
         background-color: $color-primary;
 
+        p {
+            @include font-rem(14);
+            color: $color-ivory;
+        }
+
         &__close {
             position: absolute;
             top: 20px;
@@ -167,8 +172,6 @@
 
         &__subheading {
             margin: 20px 0 0;
-            @include font-rem(14);
-            color: $color-ivory;
         }
 
         &__content {
@@ -191,18 +194,22 @@
             display: flex;
             align-items: center;
             margin: 20px 0 0;
+            border-bottom: 1px solid transparent;
+            padding: 0 0 10px;
+            transition: $trans-fast;
+            cursor: pointer;
 
             svg {
                 margin: 0 10px 0 0;
                 width: 16px;
             }
 
-            p {
-                color: $color-ivory;
-            }
-
             &:first-child {
                 margin: 0;
+            }
+
+            &:hover {
+                border-color: $color-tertiary;
             }
         }
 

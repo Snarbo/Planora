@@ -61,6 +61,7 @@
 .checkbox-label {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     input {
         display: none;
@@ -84,7 +85,7 @@
                 border-radius: 5px;
                 width: 20px;
                 height: 20px;
-                background-color: $color-secondary;
+                @include theme-property("background-color", $color-secondary, $color-primary);
             }
 
             &::after {
