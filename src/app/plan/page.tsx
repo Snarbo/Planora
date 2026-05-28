@@ -16,7 +16,8 @@ import { Modal } from "@/components/Modal/Modal";
 
 import {
   IconClose,
-  IconSearch
+  IconSearch,
+  IconStars
 } from "@/components/Icons";
 
 import "./plan.scss";
@@ -147,11 +148,21 @@ export default function Plan() {
               </>
             ) : (
               <>
-                <div className="date">
-                  <p className="date__day">{day}</p>
-                  <p className="date__date">{date}</p>
+                <div className="date__wrapper">
+                  <div className="date">
+                    <p className="date__day">{day}</p>
+                    <p className="date__date">{date}</p>
+                  </div>
+                  <button
+                    className="button button--icon button--primary"
+                    onClick={handleAIGenerate}
+                    disabled={isGenerating}
+                  >
+                    <IconStars color="tertiary" />
+                    {isGenerating ? "Generating..." : "AI Generate"}
+                  </button>
                 </div>
-
+                
                 <div className="groups">
                   {(["breakfast", "lunch", "dinner"] as MealType[]).map(
                     (type) => (

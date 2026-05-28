@@ -12,6 +12,13 @@
 .plan__selection {
 
     .date {
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         &__day, &__date {
             @include font-rem(14);
         }
