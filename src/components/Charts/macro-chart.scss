@@ -42,8 +42,12 @@
     }
 
     &-label, &-value {
-      @include font-rem(14);
+      @include font-rem(12);
       @include theme-property("color", $color-primary, $color-ivory);
+
+      @media (min-width: $mq-tablet) {
+          @include font-rem(14);
+      }
     }
 
     &-label {

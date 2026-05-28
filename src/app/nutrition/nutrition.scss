@@ -4,21 +4,37 @@
 .nutrition {
 
     .content__groups {
-        display: grid;
-        gap: 20px;
-        padding: 20px;
-        @include theme-property("background-color", $color-ivory, $color-primary);
 
-        @media (min-width: $mq-tablet) {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
+        &--calories-macro-goal {
+            display: grid;
+            gap: 20px;
+            padding: 0 20px;
+            @include theme-property("background-color", $color-ivory, $color-primary);
 
-        @media (min-width: $mq-desktop) {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 30px 0 0;
-            padding: 0;
+            @media (min-width: $mq-tablet) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 0 30px;
+            }
+
+            @media (min-width: $mq-desktop) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin: 30px 0 0;
+                padding: 0;
+            }
+        }    
+        
+        &--ai-insights {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 20px 0 0;
+            @include theme-property("background-color", $color-ivory, $color-primary);
+
+            @media (min-width: $mq-tablet) {
+                padding: 30px 0 0;
+            }
         }
     }
 
@@ -42,6 +58,32 @@
 
         &--macro .macro-chart {
             flex: 1;
+        }
+
+        &--ai-insights {
+            flex: 1;
+            border-radius: 0;
+
+            @media (min-width: $mq-tablet) {
+                padding: 30px;
+            }
+
+            @media (min-width: $mq-desktop) {
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .content__title-wrapper {
+        display: flex;
+        align-items: center;
+
+        .content__title {
+            margin: 0 0 0 15px;
+
+            @media (min-width: $mq-desktop) {
+                margin: 0 0 0 30px;
+            }
         }
     }
 }

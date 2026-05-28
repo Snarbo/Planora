@@ -60,6 +60,36 @@
                 padding: 30px;
             }
         }
+
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+
+            svg {
+                width: auto;
+                height: 18px;
+            }
+
+            &--ai {
+                background-color: $color-tertiary;
+            }
+
+            &--nutrition, &--check {
+                background-color: $color-light-blue;
+            }
+
+            &--warning {
+                background-color: $color-cream;
+            }
+
+            &--danger {
+                background-color: #FAECE7;
+            }
+        }
         
         &__title {
             margin: 0 0 20px;

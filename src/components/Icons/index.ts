@@ -3,6 +3,8 @@ export { IconHistory } from "./IconHistory";
 export { IconSearch } from "./IconSearch";
 export { IconShoppingList } from "./IconShoppingList";
 export { IconNutrition } from "./IconNutrition";
+export { IconWarning } from "./IconWarning";
+export { IconCheck } from "./IconCheck";
 export { IconSettings } from "./IconSettings";
 export { IconChevronRight } from "./IconChevronRight";
 export { IconAdd } from "./IconAdd";
