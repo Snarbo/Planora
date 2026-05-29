@@ -138,7 +138,7 @@ export const Insights = ({ weekPlan }: InsightsProps) => {
 
   if (error) {
     return (
-      <div className="insights insights--error">
+      <div className="insights">
         <p className="insight__error">{error}</p>
       </div>
     );

@@ -109,7 +109,11 @@ Return ONLY a valid JSON array, no explanation or markdown:
     });
 
     const text = response.choices[0].message.content || "";
-    const clean = text.replace(/```json|```/g, "").trim();
+    const clean = text
+      .replace(/```json|```/g, "")
+      .replace(/\*\*/g, "")   
+      .replace(/\*/g, "")    
+      .trim();
     const insights: Insight[] = JSON.parse(clean);
 
     return Response.json({ insights });

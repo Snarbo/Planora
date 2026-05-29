@@ -42,14 +42,21 @@
     &__content {
         @include font-rem(14);
         @include theme-property("color", $color-primary, $color-ivory);
+
+        @media (min-width: $mq-tablet) {
+            @include font-rem(16);
+        }
+    }
+
+    &__error {
+        @include theme-property("color", $color-primary, $color-ivory);
     }
 }
 
 .insight__skeleton {
 
     &-icon, &-text {
-        background: linear-gradient(90deg, #e5e5e5 25%,#f5f5f5 50%,#e5e5e5 75%);
-        background-size: 200% 100%;
+        @include theme-property("background", linear-gradient(90deg, #e5e5e5 25%, #f5f5f5 50%, #e5e5e5 75%) 0 0 / 200% 100%, linear-gradient(90deg, #0A0F1F 25%, #141c33 50%, #0A0F1F 75%) 0 0 / 200% 100%);
         animation: skeleton-loading 1.5s infinite ease-in-out;
     }
 
