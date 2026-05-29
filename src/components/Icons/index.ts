@@ -15,3 +15,5 @@ export { IconStars } from "./IconStars";
 export { IconLogout } from "./IconLogout";
 export { IconLight } from "./IconLight";
 export { IconDark } from "./IconDark";
+export { IconBellOutline } from "./IconBellOutline";
+export { IconBellFull } from "./IconBellFull";

@@ -123,6 +123,22 @@
         }
     }
 
+    ::-webkit-scrollbar {
+        width: 4px;
+
+        &-track, &-thumb {
+            border-radius: 5px;
+        }
+
+        &-track {    
+            background-color: $color-primary;
+        }
+
+        &-thumb {
+            background-color: $color-tertiary;
+        }
+    }
+
     @media (min-width: $mq-desktop) {
         height: 100vh;
     }

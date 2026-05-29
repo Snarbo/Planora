@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
+import { useInsightsStore } from "@/store/useInsightsStore";
+
+import type { InsightType, InsightsProps } from "@/types/insights";
+
 import {
   IconNutrition,
   IconWarning,
@@ -9,40 +13,6 @@ import {
 } from "@/components/Icons";
 
 import "./insights.scss";
-
-type InsightType = "nutrition" | "warning" | "danger" | "check";
-
-type Insight = {
-  type: InsightType;
-  title: string;
-  message: string;
-};
-
-type Meal = {
-  id: string;
-  name: string;
-  mealType: string;
-  nutrition: {
-    kcal: number;
-    protein: number;
-    carbs: number;
-    fat: number;
-    fibre: number;
-  };
-};
-
-type DayPlan = {
-  date: string;
-  meals: {
-    breakfast?: Meal;
-    lunch?: Meal;
-    dinner?: Meal;
-  };
-};
-
-type InsightsProps = {
-  weekPlan: DayPlan[];
-};
 
 const ICON_MAP: Record<InsightType, { icon: React.ReactNode; modifier: string }> = {
   nutrition: {
@@ -71,9 +41,10 @@ const ICON_COLOR_MAP: Record<InsightType, string> = {
 };
 
 export const Insights = ({ weekPlan }: InsightsProps) => {
-  const [insights, setInsights] = useState<Insight[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const { insights, setInsights } = useInsightsStore();
 
   const {
     nutritionCalories,
@@ -87,6 +58,11 @@ export const Insights = ({ weekPlan }: InsightsProps) => {
 
   useEffect(() => {
     if (!weekPlan || weekPlan.length === 0) return;
+
+    if (insights.length > 0) {
+      setLoading(false);
+      return;
+    }
 
     const fetchInsights = async () => {
       setLoading(true);
@@ -110,10 +86,15 @@ export const Insights = ({ weekPlan }: InsightsProps) => {
           }),
         });
 
-        if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+        if (!res.ok) {
+          throw new Error(`Request failed: ${res.status}`);
+        }
 
         const data = await res.json();
-        if (data.error) throw new Error(data.error);
+
+        if (data.error) {
+          throw new Error(data.error);
+        }
 
         setInsights(data.insights);
       } catch (err) {
@@ -127,6 +108,8 @@ export const Insights = ({ weekPlan }: InsightsProps) => {
     fetchInsights();
   }, [
     weekPlan,
+    insights.length,
+    setInsights,
     nutritionCalories,
     nutritionProtein,
     nutritionCarbs,
@@ -140,7 +123,14 @@ export const Insights = ({ weekPlan }: InsightsProps) => {
     return (
       <div className="insights insights--loading">
         {[...Array(4)].map((_, i) => (
-          <div key={i} className="insight insight--skeleton" />
+          <div key={i} className="insight__skeleton">
+            <div className="insight__skeleton-icon"></div>
+            <div className="insight__skeleton-content">
+              <div className="insight__skeleton-text"></div>
+              <div className="insight__skeleton-text"></div>
+              <div className="insight__skeleton-text"></div>
+            </div>
+          </div>
         ))}
       </div>
     );
@@ -157,14 +147,18 @@ export const Insights = ({ weekPlan }: InsightsProps) => {
   return (
     <div className="insights">
       {insights.map((insight, i) => {
-        const { icon, modifier } = ICON_MAP[insight.type] ?? ICON_MAP.nutrition;
-        const iconColor = ICON_COLOR_MAP[insight.type] ?? ICON_COLOR_MAP.nutrition;
+        const { icon, modifier } =
+          ICON_MAP[insight.type] ?? ICON_MAP.nutrition;
+
+        const iconColor =
+          ICON_COLOR_MAP[insight.type] ?? ICON_COLOR_MAP.nutrition;
 
         return (
           <div key={i} className={`insight ${modifier}`}>
             <div className={`content__icon ${iconColor}`}>
               {icon}
             </div>
+
             <p className="insight__content">
               <b>{insight.title}.</b> {insight.message}
             </p>

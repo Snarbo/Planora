@@ -34,7 +34,6 @@ export async function POST(req: Request) {
     });
 
     const text = response.choices[0].message.content || "";
-    console.log("Raw Groq substitutions response:", text);
     const clean = text.replace(/```json|```/g, "").trim();
     const parsed = JSON.parse(clean);
     const substitutions: string[] = Array.isArray(parsed) ? parsed : [];
