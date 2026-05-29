@@ -2,9 +2,11 @@
 @use "../helpers/mixins.scss" as *;
 
 .navigation {
+    display: flex;
+    flex-direction: column;
     border-top: 1px solid $color-ivory;
     margin: 0 20px;
-    padding: 50px 0;
+    padding: 50px 0 30px;
     height: calc(100svh - 60px);
     overflow-y: auto;
 
@@ -86,8 +88,55 @@
         }
     }
 
-    @media (min-width: $mq-tablet) and (max-width: #{$mq-desktop - 1px}) {
+    &__account {    
+        margin: auto 0 0;  
+        
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 0 0;
+            border-top: 1px solid $color-ivory;
+            padding: 20px 0 0;            
+        }
+    }
+
+    &__user {
         display: flex;
+        align-items: center;
+
+        &-profile {
+            &-photo {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                &-wrapper {
+                    border: 1px solid $color-ivory;
+                    border-radius: 50%;
+                    width: 25px;
+                    height: 25px;
+                    background-color: $color-secondary;
+                }
+            }
+
+            &-name {
+                margin: 0 0 0 10px;
+                @include font-rem(14);
+                color: $color-ivory;
+            }
+        }
+    }
+
+    &__logout {
+        svg {
+            width: 13px;
+        }
+    }
+
+    @media (min-width: $mq-tablet) and (max-width: #{$mq-desktop - 1px}) {
+        flex-direction: row;
         align-items: center;
         border: 0; 
         margin: 0;  

@@ -1,17 +1,19 @@
 "use client";
 
+import { useState, useEffect, useRef  } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef  } from "react";
-import gsap from "gsap";
-
+import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import {Navigation} from "../Navigation/Navigation";
+import gsap from "gsap";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+  const profileName = usePreferencesStore((state) => state.profileName);
+  const profilePhoto = usePreferencesStore((state) => state.profilePhoto);
   const pathname = usePathname();
   const { isTablet, isDesktop } = useBreakpoints();
 
@@ -60,7 +62,7 @@ export const Header = () => {
           />
         </Link>
       </div>
-      <Navigation />
+      <Navigation />   
     </aside>;
   }
 
@@ -79,7 +81,14 @@ export const Header = () => {
         </Link>
         <Navigation />
         <div className="header__account">
-          <img src={userImage} alt="User" loading="eager"/>
+          <Image
+            src={profilePhoto}
+            alt={profileName}
+            width={25}
+            height={25}
+            loading="eager"
+            className="header__profile-photo"
+          />
         </div>
       </div>
     </header>;
@@ -98,9 +107,6 @@ export const Header = () => {
             className="header__logo"
           />
         </Link>
-        <div className="header__account">
-          <img src={userImage} alt="User" />
-        </div>
         <button onClick={handleToggleMenu} className={`header__hamburger hamburger hamburger--collapse ${isMenuOpen ? "is-active" : ""}`} type="button">
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>

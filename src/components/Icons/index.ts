@@ -12,6 +12,6 @@ export { IconClose } from "./IconClose";
 export { IconArrowRight } from "./IconArrowRight";
 export { IconAI } from "./IconAI";
 export { IconStars } from "./IconStars";
-
+export { IconLogout } from "./IconLogout";
 export { IconLight } from "./IconLight";
 export { IconDark } from "./IconDark";

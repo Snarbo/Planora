@@ -1,19 +1,29 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { navGroups } from "@/config/navigation";
+
+import {
+  IconLogout
+} from "@/components/Icons";
 
 type NavigationProps = {
   onNavigate?: () => void;
 }
 
 export const Navigation = ({ onNavigate }: NavigationProps) => {
+  const profileName = usePreferencesStore((state) => state.profileName);
+  const profilePhoto = usePreferencesStore((state) => state.profilePhoto);
   const pathname = usePathname();
   const { isTablet } = useBreakpoints();
 
   const isActive = (href: string) => pathname === href;
+
+  const handleLogout = () => {};
 
   return (
     <nav className="navigation">
@@ -52,6 +62,28 @@ export const Navigation = ({ onNavigate }: NavigationProps) => {
           </ul>
         </div>
       ))}
+      {!isTablet && 
+        <div className="navigation__account">
+          <div className="navigation__account-wrapper">
+            <div className="navigation__user">
+              <div className="navigation__user-profile-photo-wrapper">
+                <Image
+                  src={profilePhoto}
+                  alt={profileName}
+                  width={25}
+                  height={25}
+                  loading="eager"
+                  className="navigation__user-profile-photo"
+                />
+              </div>
+              <p className="navigation__user-profile-name">{profileName}</p>
+            </div>
+            <Link className="navigation__logout" href="#" onClick={handleLogout}>
+                <IconLogout color="ivory" />
+            </Link>
+          </div>
+        </div>
+      }
     </nav>
   );
 };

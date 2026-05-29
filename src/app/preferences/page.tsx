@@ -135,8 +135,7 @@ export default function Preferences() {
                 <img className="profile__image" src={profilePhoto} alt={profileName} />
                 <div className="profile__content">
                   <p className="profile__name">{profileName}</p>
-                  <p className="profile__email">{profileEmail}</p> 
-                            
+                  <p className="profile__email">{profileEmail}</p>               
                 </div>
               </div>
               <div className="content__edit">
