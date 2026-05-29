@@ -1,14 +1,14 @@
 "use client";
 
 import { useMeals } from "@/hooks/useMeals";
-import { useRecipeFilters } from "@/hooks/useRecipeFilters";
+import { useMealFilters } from "@/hooks/useMealFilters";
 import { TopBar } from "@/components/TopBar/TopBar";
-import { RecipesFilter } from "@/components/Filters/RecipesFilter";
-import {RecipeCard} from "@/components/Recipes/RecipeCard";
+import { MealsFilter } from "@/components/Filters/MealsFilter";
+import { MealCard } from "@/components/Meals/MealCard";
 
-import "./recipes.scss";
+import "./meals.scss";
 
-export default function Recipes() {
+export default function Meals() {
   const { meals } = useMeals();
 
   const {
@@ -17,13 +17,13 @@ export default function Recipes() {
     setSearchQuery,
     handleFilter,
     filteredRecipes,
-  } = useRecipeFilters(meals);
+  } = useMealFilters(meals);
 
   return (
-    <div className="standard-content recipes">
+    <div className="standard-content meals">
       <TopBar />
       <div className="standard-content__wrapper">
-        <RecipesFilter
+        <MealsFilter
           activeFilters={activeFilters}
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
@@ -31,9 +31,9 @@ export default function Recipes() {
         />
         <div className="standard-content__layout">
           <div className="standard-content__view scrollable">
-            <div className="recipes">
+            <div className="meals">
               {filteredRecipes.map((meal) => (
-                <RecipeCard key={meal.id} type={meal.mealType} meal={meal}/>
+                <MealCard key={meal.id} type={meal.mealType} meal={meal}/>
               ))}
             </div>
           </div>

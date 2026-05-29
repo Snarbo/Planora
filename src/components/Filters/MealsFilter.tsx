@@ -7,17 +7,17 @@ import {
 
 import "../../app/styles/components/filter.scss";
 
-export type RecipesFilterProps = FilterProps & {
+export type MealsFilterProps = FilterProps & {
   activeFilters: RecipeFilters[];
   handleFilter: (filter: RecipeFilters | "all") => void;
 }; 
 
-export const RecipesFilter = ({
+export const MealsFilter = ({
   enableSearch = true,
   activeFilters,
   setSearchQuery,
   handleFilter,
-}: RecipesFilterProps) => {
+}: MealsFilterProps) => {
   return (
     <div className="filter">
         {enableSearch && <div className="input input--search">

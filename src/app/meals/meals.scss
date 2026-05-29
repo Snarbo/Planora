@@ -1,7 +1,7 @@
 @use "../styles/helpers/variables.scss" as *;
 @use "../styles/helpers/mixins.scss" as *;
 
-.recipes {
+.meals {
 
     .filter {
         padding: 20px;
@@ -23,7 +23,7 @@
         }
     }
 
-    .recipes {
+    .meals {
         display: grid;
         gap: 20px;
 

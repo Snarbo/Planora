@@ -1,7 +1,6 @@
 "use client";
 
 import { useMealPlans } from "@/hooks/useMealPlans";
-import { useMealFilters } from "@/hooks/useMealFilters";
 import { TopBar } from "@/components/TopBar/TopBar";
 import { Stats } from "@/components/Stats/Stats";
 import { NutritionFilter } from "@/components/Filters/NutritionFilter";

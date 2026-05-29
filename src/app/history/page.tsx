@@ -2,7 +2,7 @@
 
 import { useMemo, useEffect, useRef } from "react";
 import { useMealPlans } from "@/hooks/useMealPlans";
-import { useMealFilters } from "@/hooks/useMealFilters";
+import { useHistoryFilters } from "@/hooks/useHistoryFilters";
 import type { Meal } from "@/types/meals";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { TopBar } from "@/components/TopBar/TopBar";
@@ -69,7 +69,7 @@ export default function History() {
     setSearchQuery,
     handleFilter,
     filteredMeals,
-  } = useMealFilters(allMeals as MealWithDate[]);
+  } = useHistoryFilters(allMeals as MealWithDate[]);
 
   const isActive = (type: any) => activeFilters.length === 0 || activeFilters.includes(type);
 

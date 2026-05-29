@@ -20,7 +20,7 @@ export const navGroups: NavGroup[] = [
   {
     title: "Discover",
     items: [
-      { href: "/recipes", label: "Recipes", expandedLabel: "Recipes", icon: IconSearch },
+      { href: "/meals", label: "Meals", expandedLabel: "Meals", icon: IconSearch },
       { href: "/shopping-list", label: "Shopping", expandedLabel: "Shopping List", icon: IconShoppingList },
       { href: "/nutrition", label: "Nutrition", expandedLabel: "Nutrition", icon: IconNutrition },
     ],
