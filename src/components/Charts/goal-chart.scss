@@ -1,6 +1,43 @@
 @use "../../app/styles/helpers/variables.scss" as *;
 @use "../../app/styles/helpers/mixins.scss" as *;
 
-.goal-chart {
-    //
+.goals-chart {
+    display: grid;
+    gap: 4px;
+
+    .goal {
+        display: flex;
+        flex-direction: column;
+
+        &__labels {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__name, &__value {
+            @include font-rem(12);
+            @include theme-property("color", $color-primary, $color-ivory);
+
+            @media (min-width: $mq-tablet) {
+                @include font-rem(14);
+            }
+        }
+
+        &__progress {
+            margin: 4px 0 0;
+        }
+
+        &__message {
+            @include font-rem(12);
+
+            &--warning {
+                color: $color-warning;
+            }
+
+            &--danger {
+                color: $color-error;
+            }
+        }
+    }
 }

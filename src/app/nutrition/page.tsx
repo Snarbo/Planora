@@ -38,8 +38,8 @@ export default function Nutrition() {
             <MacroChart data={plans} />
           </div>
           <div className="content__group content__group--goal">
-            <h3 className="content__title">Goal progress</h3>
-            <GoalChart />
+            <h3 className="content__title">Goal progress - today</h3>
+            <GoalChart data={plans} />
           </div>
         </div>
         <div className="content__groups content__groups--ai-insights">

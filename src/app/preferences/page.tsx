@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { useShallow } from 'zustand/react/shallow'
+import { useShallow } from "zustand/react/shallow"
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { usePreferencesField } from "@/hooks/usePreferences";
 import {useImageUpload} from "@/hooks/useImageUpload";
