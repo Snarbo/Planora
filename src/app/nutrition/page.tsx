@@ -50,7 +50,7 @@ export default function Nutrition() {
               </div>
               <h3 className="content__title">AI Nutrition Insights</h3>
             </div>
-            <Insights />
+            <Insights weekPlan={plans} />
           </div>
         </div>   
       </div>

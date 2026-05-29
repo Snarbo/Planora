@@ -235,7 +235,7 @@ export default function ShoppingList() {
     setSwapLoading(true);
 
     try {
-      const res = await fetch("/api/ingredient-substitutions", {
+      const res = await fetch("/api/generate-ingredient-substitutions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
