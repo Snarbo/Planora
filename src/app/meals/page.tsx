@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMeals } from "@/hooks/useMeals";
 import { useMealFilters } from "@/hooks/useMealFilters";
 import { TopBar } from "@/components/TopBar/TopBar";
@@ -14,7 +14,10 @@ const SKELETON_COUNT = 8;
 
 export default function Meals() {
   const { meals, loading } = useMeals();
+  const [minLoading, setMinLoading] = useState(true);
   const listRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
+  const isLoading = loading || minLoading;
 
   const {
     activeFilters,
@@ -25,21 +28,37 @@ export default function Meals() {
   } = useMealFilters(meals);
 
   useEffect(() => {
-    if (!loading && listRef.current) {
-      const cards = listRef.current.querySelectorAll(".meal-card");
-      gsap.fromTo(
-        cards,
-        { opacity: 0, y: 24 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.4,
-          ease: "power2.out",
-          stagger: 0.07,
-        }
-      );
+    const timer = setTimeout(() => setMinLoading(false), 800);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading && listRef.current && !hasAnimated.current) {
+      hasAnimated.current = true;
+      setTimeout(() => {
+        const cards = listRef.current?.querySelectorAll(".meal-card");
+        if (!cards) return;
+        gsap.fromTo(
+          cards,
+          { opacity: 0, y: 24 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            stagger: 0.07,
+          }
+        );
+      }, 50);
     }
-  }, [loading, filteredRecipes]);
+  }, [isLoading]);
+
+  useEffect(() => {
+    if (hasAnimated.current && listRef.current) {
+      const cards = listRef.current.querySelectorAll(".meal-card");
+      gsap.set(cards, { opacity: 1, y: 0 });
+    }
+  }, [filteredRecipes]);
 
   return (
     <div className="standard-content meals">
@@ -54,9 +73,9 @@ export default function Meals() {
         <div className="standard-content__layout">
           <div className="standard-content__view scrollable">
             <div className="meals" ref={listRef}>
-              {loading
+              {isLoading
                 ? Array.from({ length: SKELETON_COUNT }).map((_, i) => (
-                    <div key={i} className="meal-card meal-card--skeleton">
+                    <div key={i} className="meal-card--skeleton">
                       <div className="meal-card__skeleton-image" />
                       <div className="meal-card__skeleton-lines">
                         <div className="meal-card__skeleton-line meal-card__skeleton-line--title" />
