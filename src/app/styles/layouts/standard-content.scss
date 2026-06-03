@@ -38,6 +38,10 @@
         padding: 20px;
         @include theme-property("background-color", $color-white, $color-secondary);  
 
+        .loading, .no-results {
+            @include theme-property("color", $color-primary, $color-ivory);
+        }
+
         @media (min-width: $mq-tablet) {
             padding: 30px;
         }

@@ -185,7 +185,10 @@ export default function History() {
         />
         <div className="standard-content__layout">
           <div className="standard-content__view scrollable">
-            <div className="weeks">
+            {weeklyPlans.length === 0 ? (
+               <p className="no-results">No meals planned yet. Add meals to your plan to generate a history.</p>
+            ) : (
+              <div className="weeks">
               {weeklyPlans.map(([weekStart, meals]) => (
                 <div key={weekStart} className="week">
                   <div className="week__heading">
@@ -325,6 +328,7 @@ export default function History() {
                 </div>
               ))}
             </div>
+            )}     
           </div>
         </div>
       </div>
