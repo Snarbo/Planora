@@ -67,6 +67,7 @@
         padding: 8px 20px;
         @include font-rem(12);
         font-weight: $weight-bold;
+        line-height: 1;
         @include theme-property("color", $color-primary, $color-ivory);
 
         &s {

@@ -28,11 +28,7 @@
   }
 
   &-3 {
-    @include font-rem(14);
-
-    @media (min-width: $mq-tablet) {
-      @include font-rem(16);
-    }
+    @include font-rem(16);
 
     @media (min-width: $mq-desktop) {
       @include font-rem(18);
@@ -62,4 +58,42 @@ p {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+
+  li {  
+    margin: 20px 0 0;   
+    @include font-rem(16);
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &.list-item {
+      position: relative;
+      padding: 0 0 0 20px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 0;
+        border: 1px solid;
+        border-radius: 50%;
+        @include theme-property("border-color", $color-primary, $color-tertiary);
+        width: 8px;
+        height: 8px;
+
+        @media (min-width: $mq-desktop) {
+          top: 9px;
+        }
+      }
+    }
+
+    @media (min-width: $mq-desktop) {
+      @include font-rem(18);
+    }
+  }
 }

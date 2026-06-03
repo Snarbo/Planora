@@ -22,7 +22,15 @@ export const Breadcrumbs = () => {
             <Icon className="breadcrumbs__icon" color={theme == "light" ? "primary" : "ivory"} />
             <p>{breadcrumb.groupTitle}</p>
             <IconChevronRight className="breadcrumbs__chevron" color={theme == "light" ? "primary" : "ivory"} />
+
+            {breadcrumb.parentPage && (
+                <>
+                    <p>{breadcrumb.parentPage}</p>
+                    <IconChevronRight className="breadcrumbs__chevron" color={theme == "light" ? "primary" : "ivory"} />
+                </>
+            )}
+
             <p>{breadcrumb.pageTitle}</p>
         </div>
-    )
+    );
 }

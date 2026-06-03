@@ -10,6 +10,7 @@ export { IconChevronRight } from "./IconChevronRight";
 export { IconAdd } from "./IconAdd";
 export { IconClose } from "./IconClose";
 export { IconArrowRight } from "./IconArrowRight";
+export { IconArrowLeft } from "./IconArrowLeft";
 export { IconAI } from "./IconAI";
 export { IconStars } from "./IconStars";
 export { IconLogout } from "./IconLogout";

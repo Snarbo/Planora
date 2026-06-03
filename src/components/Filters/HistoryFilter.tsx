@@ -27,7 +27,7 @@ export const HistoryFilter = ({
             name="historySearch"
             className="filter__search"
             placeholder="Search meals..."
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => setSearchQuery?.(e.target.value)}
           />
         </div> }
         <div className="filter__buttons">
