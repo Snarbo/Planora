@@ -248,6 +248,10 @@
                 gap: 30px;
             }
         }
+
+        p {
+            @include theme-property("color", $color-primary, $color-ivory);
+        }
     }
 
     .related-items {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useMealPlans } from "@/hooks/useMealPlans";
 import type { CategoryMap } from "@/types/shoppingList";
@@ -26,16 +26,18 @@ import "./shopping-list.scss";
 export default function ShoppingList() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [copiedWeek, setCopiedWeek] = useState<string | null>(null);
-  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>(() => {
-    if (typeof window === "undefined") return {};
-    const stored = localStorage.getItem("shopping-list-checked");
-    return stored ? JSON.parse(stored) : {};
-  });
-  const [labelOverrides, setLabelOverrides] = useState<Record<string, string>>(() => {
-    if (typeof window === "undefined") return {};
-    const stored = localStorage.getItem("shopping-list-label-overrides");
-    return stored ? JSON.parse(stored) : {};
-  });
+
+  const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
+  const [labelOverrides, setLabelOverrides] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const checked = localStorage.getItem("shopping-list-checked");
+    const labels = localStorage.getItem("shopping-list-label-overrides");
+
+    if (checked) setCheckedItems(JSON.parse(checked));
+    if (labels) setLabelOverrides(JSON.parse(labels));
+  }, []);
+
   const [activeSwapItem, setActiveSwapItem] = useState<string | null>(null);
   const [substitutions, setSubstitutions] = useState<string[]>([]);
   const [swapLoading, setSwapLoading] = useState(false);
