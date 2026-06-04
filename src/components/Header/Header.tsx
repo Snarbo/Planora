@@ -6,7 +6,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useBreakpoints } from "@/hooks/useBreakpoints";
-import {Navigation} from "../Navigation/Navigation";
+import { NotificationBell } from "../Notifications/NotificationBell";
+import { Notifications } from "@/components/Notifications/Notifications";
+import { Navigation } from "../Navigation/Navigation";
 import gsap from "gsap";
 
 export const Header = () => {
@@ -80,6 +82,8 @@ export const Header = () => {
           />
         </Link>
         <Navigation />
+        <NotificationBell />
+        <Notifications />
         <div className="header__account">
           <Image
             src={profilePhoto}
@@ -107,6 +111,8 @@ export const Header = () => {
             className="header__logo"
           />
         </Link>
+        <NotificationBell />
+        <Notifications />
         <button onClick={handleToggleMenu} className={`header__hamburger hamburger hamburger--collapse ${isMenuOpen ? "is-active" : ""}`} type="button">
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>

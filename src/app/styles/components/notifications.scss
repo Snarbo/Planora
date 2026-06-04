@@ -1,0 +1,156 @@
+@use "../helpers/variables.scss" as *;
+@use "../helpers/mixins.scss" as *;
+
+.notification-bell {
+    position: relative;
+    border: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &__count {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 2px;
+        min-width: 18px;
+        min-height: 18px;
+        @include font-rem(12);
+        line-height: 1;
+        background-color: $color-red;
+        color: $color-ivory;
+    }
+
+    svg {
+        width: 20px;
+
+        @media (min-width: $mq-tablet) {
+            width: 23px;
+        }
+    }
+
+    @media (min-width: $mq-tablet) {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+.notifications {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    border-top: 1px solid;
+    @include theme-property("border-color", transparent, $color-border-faint);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 20px;
+    max-height: 50svh;
+    @include theme-property("background-color", $color-white, $color-secondary);
+    box-shadow: -15px 15px 15px 0px rgba(0,0,0,0.5);
+    overflow-y: auto;
+    z-index: 1;
+
+    &__title {
+        @include theme-property("color", $color-primary, $color-ivory);
+    }
+
+    &__wrapper {
+        margin: 20px 0 0;
+
+        @media (min-width: $mq-tablet) {
+            margin: 30px 0 0;
+        }
+    }
+
+    &__remove {
+        margin: 20px 0 0;
+        width: 100%; 
+    }
+
+    .notification {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin: 8px 0 0;
+        border-top: 1px solid;
+        @include theme-property("border-color", $color-light-grey, $color-border-faint);
+        padding: 8px 0 0;
+
+        &__content {
+            padding: 0 20px 0 0;
+
+            @media (min-width: $mq-tablet) {
+                display: flex;
+                align-items: flex-start;
+                padding: 0 30px 0 0;
+            }
+        }
+
+        &__type, &__text {
+            @include theme-property("color", $color-primary, $color-ivory);
+        }
+
+        &__type {
+            font-weight: $weight-bold;
+        }
+
+        &__text-date {
+            @media (min-width: $mq-tablet) {
+                display: flex;
+                align-items: center;
+                margin: 0 0 0 10px;
+            }
+        }
+
+        &__date {
+            @include font-rem(12);
+            color: $color-grey;
+
+            @media (min-width: $mq-tablet) {
+                margin: 0 0 0 10px;
+                @include font-rem(16);
+            }
+        }
+
+        &__remove {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-radius: 50%;
+            @include theme-property("border-color", transparent, $color-border-faint);
+            width: 30px;
+            height: 30px;
+            background-color: $color-primary;
+            cursor: pointer;
+
+            svg {
+                width: 10px;
+                height: auto;
+            }
+        }
+
+        &:first-child {
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+
+        @media (min-width: $mq-tablet) {
+            margin: 20px 0 0;
+            padding: 20px 0 0;
+        }
+    }
+
+    @media (min-width: $mq-tablet) {
+        left: initial;
+        padding: 30px;
+        max-width: 70svw;
+    }
+}

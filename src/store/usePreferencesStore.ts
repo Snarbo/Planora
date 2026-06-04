@@ -6,7 +6,6 @@ import {
   CuisinePreferences,
   DietTypes,
   Allergies,
-  Theme,
   PreferencesState,
 } from "@/types/preferences";
 

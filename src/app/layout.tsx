@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fontNexa } from "../utils/fonts";
 import { ThemeWrapper } from "@/providers/ThemeProvider";
 import { Header } from "../components/Header/Header";
+import { Toaster } from "sonner";
 
 import "./styles/styles.scss";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
           <Header />
           <main>
             {children}
+            <Toaster />
           </main>
         </ThemeWrapper>    
       </body>
