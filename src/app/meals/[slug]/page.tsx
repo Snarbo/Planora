@@ -1,13 +1,15 @@
 // app/meals/[slug]/page.tsx
 "use client";
 
-import { useMeals } from "@/hooks/useMeals";
-import { useParams } from "next/navigation";
-import { toSlug } from "@/utils/slug";
-import { TopBar } from "@/components/TopBar/TopBar";
-import { MealCard } from "@/components/Meals/MealCard";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useMeals } from "@/hooks/useMeals";
+import { toSlug } from "@/utils/slug";
+import { getMealImage } from "@/utils/getMealImage";
+import { TopBar } from "@/components/TopBar/TopBar";
+import { MealCard } from "@/components/Meals/MealCard";
+
 
 import "./meal-detail.scss";
 
@@ -48,7 +50,7 @@ export default function MealDetail() {
               <div className="meal-detail__image-nutrition">
                 <div className="meal-detail__image-wrapper">
                   <Image
-                    src={"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1740&auto=format&fit=crop"}
+                    src={getMealImage(meal!.name, meal!.mealType)}
                     alt={meal.name}
                     width={800}
                     height={500}

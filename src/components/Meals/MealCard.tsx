@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { MealSlotProps } from "@/types/meals";
 import { toSlug } from "@/utils/slug";
+import { getMealImage } from "@/utils/getMealImage";
 
 import "./meal-card.scss";
 
@@ -15,10 +16,10 @@ export const MealCard = ({meal}: MealSlotProps) => {
         <div className="meal-card__head">
           <div className="meal-card__image-wrapper">
             <Image
-              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1740&auto=format&fit=crop"
+              src={getMealImage(meal!.name, meal!.mealType)}
               alt={meal!.name}
               width={340}
-              height={230}
+              height={235}
               loading="eager"
               className="meal-card__image"
             />

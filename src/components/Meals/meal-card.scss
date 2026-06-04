@@ -36,7 +36,7 @@
         border-top: 0; 
         border-bottom-right-radius: 5px;  
         border-bottom-left-radius: 5px;  
-        @include theme-property("border-color", $color-border-dark, $color-border-faint);
+        @include theme-property("border-color", $color-border-light, $color-border-faint);
         padding: 20px;
 
         @media (min-width: $mq-desktop) {
