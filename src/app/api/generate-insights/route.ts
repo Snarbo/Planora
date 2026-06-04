@@ -106,14 +106,19 @@ Return ONLY a valid JSON array, no explanation or markdown:
       model: "llama-3.3-70b-versatile",
       messages: [{ role: "user", content: prompt }],
       max_tokens: 600,
+      temperature: 0,
     });
 
     const text = response.choices[0].message.content || "";
-    const clean = text
-      .replace(/```json|```/g, "")
-      .replace(/\*\*/g, "")   
-      .replace(/\*/g, "")    
-      .trim();
+    const match = text.match(/\[[\s\S]*\]/);
+
+    if (!match) {
+      throw new Error(`No JSON array found in model response: ${text}`);
+    }
+    const clean = match[0]
+    .replace(/\*+/g, "")   
+    .replace(/`/g, "")   
+    .replace(/#/g, "");
     const insights: Insight[] = JSON.parse(clean);
 
     return Response.json({ insights });

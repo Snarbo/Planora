@@ -245,7 +245,7 @@
             @media (min-width: $mq-tablet) {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
+                gap: 8px 30px;
             }
         }
 
