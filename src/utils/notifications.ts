@@ -17,16 +17,20 @@ const formatDate = (date: Date): string => {
   const y = date.getFullYear();
   const m = String(date.getMonth() + 1).padStart(2, "0");
   const d = String(date.getDate()).padStart(2, "0");
+
   return `${y}-${m}-${d}`;
 };
 
 const getISOWeekKey = (): string => {
   const now = new Date();
   const thursday = new Date(now);
+
   thursday.setDate(now.getDate() + (4 - (now.getDay() || 7)));
+
   const year = thursday.getFullYear();
   const startOfYear = new Date(year, 0, 1);
   const week = Math.ceil(((thursday.getTime() - startOfYear.getTime()) / 86400000 + startOfYear.getDay() + 1) / 7);
+
   return `${year}-W${String(week).padStart(2, "0")}`;
 };
 
@@ -40,6 +44,7 @@ export const markShoppingListFiredThisWeek = (): void => {
 
 export const getUnplannedMeals = (plans: StoredMealPlan[]): number => {
   const today = new Date();
+
   today.setHours(0, 0, 0, 0);
 
   const daysLeftInWeek: string[] = [];
@@ -55,6 +60,7 @@ export const getUnplannedMeals = (plans: StoredMealPlan[]): number => {
 
   const totalPlanned = daysLeftInWeek.reduce((acc, date) => {
     const day = plans.find((d) => d.date === date);
+    
     if (!day) return acc;
     return acc + MEAL_SLOTS.filter((slot) => !!day.meals[slot]).length;
   }, 0);
@@ -66,6 +72,7 @@ export const scheduleMealReminderAt10am = (callback: () => void): () => void => 
   const getMsUntil10am = () => {
     const now = new Date();
     const next10am = new Date();
+
     next10am.setHours(10, 0, 0, 0);
 
     if (now >= next10am) {

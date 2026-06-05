@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import type { Meal, MealType } from "@/types/meals";
+import { useMealPlansStore } from "@/store/useMealPlansStore";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useStatsStore } from "@/store/useStatsStore";
 
@@ -24,6 +25,7 @@ export const useMealPlans = () => {
   }, []);
 
   useEffect(() => {
+    useMealPlansStore.getState().setPlans(plans);
     useStatsStore.getState().setPlans(plans);
   }, [plans]);
 
@@ -185,6 +187,7 @@ export const useMealPlans = () => {
 
   return {
     plans,
+    setPlans,
     loading,
     getMeals,
     setMeal,
