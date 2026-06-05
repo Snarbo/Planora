@@ -34,6 +34,30 @@
         }
     }
 
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: -100%;
+        width: 100%;
+        aspect-ratio: 1/cos(30deg);
+        clip-path: polygon(50% 0,100% 100%,0 100%);
+        @include theme-property("background-color", $color-white, $color-secondary);
+        opacity: 0;
+
+        @media (min-width: $mq-tablet) and (max-width: #{$mq-desktop - 1px}) {
+            bottom: calc(-100% - 4px);
+        }
+
+        @media (min-width: $mq-desktop) {
+            @include theme-property("background-color", $color-white, $color-border-faint);
+        }
+    }
+
+    &--active::after {
+        opacity: 1;
+    }
+
     @media (min-width: $mq-tablet) {
         width: 23px;
         height: 23px;
@@ -55,6 +79,10 @@
     box-shadow: -15px 15px 15px 0px rgba(0,0,0,0.5);
     overflow-y: auto;
     z-index: 1;
+
+    &__empty {
+        @include theme-property("color", $color-primary, $color-ivory);
+    }
 
     &__title {
         @include theme-property("color", $color-primary, $color-ivory);
@@ -83,11 +111,17 @@
         padding: 8px 0 0;
 
         &__content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
             padding: 0 20px 0 0;
+            gap: 10px;
 
             @media (min-width: $mq-tablet) {
                 display: flex;
-                align-items: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: flex-start;         
                 padding: 0 30px 0 0;
             }
         }
@@ -101,10 +135,13 @@
         }
 
         &__text-date {
+            
+
             @media (min-width: $mq-tablet) {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
-                margin: 0 0 0 10px;
+                gap: 8px;
             }
         }
 
@@ -113,7 +150,6 @@
             color: $color-grey;
 
             @media (min-width: $mq-tablet) {
-                margin: 0 0 0 10px;
                 @include font-rem(16);
             }
         }
@@ -152,5 +188,9 @@
         left: initial;
         padding: 30px;
         max-width: 70svw;
+    }
+
+    @media (min-width: $mq-desktop) {
+        max-width: 800px;
     }
 }

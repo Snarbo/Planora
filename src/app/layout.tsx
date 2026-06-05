@@ -1,5 +1,7 @@
+
 import type { Metadata } from "next";
 import { fontNexa } from "../utils/fonts";
+import { NotificationsInit } from "@/providers/NotificationsInit";
 import { ThemeWrapper } from "@/providers/ThemeProvider";
 import { Header } from "../components/Header/Header";
 import { Toaster } from "sonner";
@@ -21,6 +23,7 @@ export default function RootLayout({
     <html lang="en" className={`${fontNexa.variable}`}>
       <body>
         <ThemeWrapper>
+          <NotificationsInit />
           <Header />
           <main>
             {children}
