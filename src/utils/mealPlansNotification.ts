@@ -1,10 +1,11 @@
-import { Meal, MealType } from "@/types/meals";
+import { MealType } from "@/types/meals";
+import { StoredMealPlan } from "@/hooks/useMealPlans";
 
 const MEAL_SLOTS: MealType[] = ["breakfast", "lunch", "dinner"];
 
 export type DayMealPlan = {
   date: string;
-  meals: Partial<Record<MealType, Meal>>;
+  meals: Partial<Record<MealType, StoredMealPlan["meals"][MealType]>>;
 };
 
 export type UnplannedDay = {
@@ -19,12 +20,25 @@ const formatDate = (date: Date): string => {
   return `${y}-${m}-${d}`;
 };
 
-export const getUnplannedMeals = (): number => {
-  const raw = localStorage.getItem("meal-plans");
-  if (!raw) return 0;
+const getISOWeekKey = (): string => {
+  const now = new Date();
+  const thursday = new Date(now);
+  thursday.setDate(now.getDate() + (4 - (now.getDay() || 7)));
+  const year = thursday.getFullYear();
+  const startOfYear = new Date(year, 0, 1);
+  const week = Math.ceil(((thursday.getTime() - startOfYear.getTime()) / 86400000 + startOfYear.getDay() + 1) / 7);
+  return `${year}-W${String(week).padStart(2, "0")}`;
+};
 
-  const mealPlan: DayMealPlan[] = JSON.parse(raw);
+export const hasShoppingListFiredThisWeek = (): boolean => {
+  return localStorage.getItem("shopping-list-notified-week") === getISOWeekKey();
+};
 
+export const markShoppingListFiredThisWeek = (): void => {
+  localStorage.setItem("shopping-list-notified-week", getISOWeekKey());
+};
+
+export const getUnplannedMeals = (plans: StoredMealPlan[]): number => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -40,7 +54,7 @@ export const getUnplannedMeals = (): number => {
   const totalPossible = daysLeftInWeek.length * 3;
 
   const totalPlanned = daysLeftInWeek.reduce((acc, date) => {
-    const day = mealPlan.find((d) => d.date === date);
+    const day = plans.find((d) => d.date === date);
     if (!day) return acc;
     return acc + MEAL_SLOTS.filter((slot) => !!day.meals[slot]).length;
   }, 0);
