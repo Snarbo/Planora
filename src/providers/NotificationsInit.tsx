@@ -15,7 +15,9 @@ export const NotificationsInit = () => {
 
     const cleanup = scheduleMealReminderAt10am(() => {
       const unplanned = getUnplannedMeals();
+
       if (unplanned === 0) return;
+      
       handleNotificationToast("Meal Reminder", `You have ${unplanned} unplanned meal(s) this week.`);
     });
 

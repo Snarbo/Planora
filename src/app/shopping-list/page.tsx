@@ -4,7 +4,6 @@ import { useState, useEffect, useMemo } from "react";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useMealPlans } from "@/hooks/useMealPlans";
 import type { CategoryMap } from "@/types/shoppingList";
-import TestToast from "@/components/TestToast/TestToast"; //temp
 
 import {
   toTitleCase,
@@ -192,8 +191,7 @@ export default function ShoppingList() {
         <div className="standard-content__wrapper">
           <div className="standard-content__layout">
             <div className="standard-content__view scrollable">
-              {renderContent()}
-              <TestToast /> 
+              {renderContent()} 
             </div>
           </div>
         </div>
