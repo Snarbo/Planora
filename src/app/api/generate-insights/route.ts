@@ -89,37 +89,49 @@ ${JSON.stringify(dailyTotals, null, 2)}
 RULES:
 - Generate exactly 4 insights
 - Each insight must have a "type": one of "nutrition" (informational/neutral), "warning" (mild concern), "danger" (exceeded goal or significant issue), "check" (positive achievement)
-- Each insight must have a short "title" (3-6 words, bold-worthy) and a "message" (1-2 sentences, specific and actionable, reference actual meals or numbers where relevant)
+- Each insight must have a short "title" (3-6 words) and a "message" (1-2 sentences, specific and actionable, reference actual meals or numbers where relevant)
 - Base insights on the actual data — mention specific meals, days, or averages
 - Cover a mix of macros (e.g. protein, fibre, calories) — don't repeat the same nutrient twice
 - Be encouraging but honest
+- Do NOT use markdown, asterisks, or bold formatting anywhere
 
-Return ONLY a valid JSON array, no explanation or markdown:
-[
+Return a JSON object with an "insights" array:
+{ "insights": [
   { "type": "check", "title": "Protein on track", "message": "..." },
   { "type": "warning", "title": "Low fibre this week", "message": "..." },
   { "type": "danger", "title": "Calories exceeded", "message": "..." },
   { "type": "nutrition", "title": "Carb balance looks good", "message": "..." }
-]`;
+]}`;
 
     const response = await groq.chat.completions.create({
       model: "llama-3.3-70b-versatile",
-      messages: [{ role: "user", content: prompt }],
+      messages: [
+        {
+          role: "system",
+          content: "You are a nutrition coach. You always respond with valid JSON only — no markdown, no bold, no explanation. Every string value must be wrapped in double quotes.",
+        },
+        { role: "user", content: prompt },
+      ],
       max_tokens: 600,
       temperature: 0,
+      response_format: { type: "json_object" },
     });
 
-    const text = response.choices[0].message.content || "";
-    const match = text.match(/\[[\s\S]*\]/);
-
-    if (!match) {
-      throw new Error(`No JSON array found in model response: ${text}`);
+    const rawText = response.choices[0].message.content || "";
+    
+    let parsed: { insights: Insight[] };
+    try {
+      parsed = JSON.parse(rawText);
+    } catch (parseErr) {
+      console.error("JSON.parse failed. Raw text was:", rawText);
+      throw new Error(`JSON parse error: ${parseErr}`);
     }
-    const clean = match[0]
-    .replace(/\*+/g, "")   
-    .replace(/`/g, "")   
-    .replace(/#/g, "");
-    const insights: Insight[] = JSON.parse(clean);
+
+    const insights = parsed.insights;
+
+    if (!Array.isArray(insights) || insights.length === 0) {
+      throw new Error(`Parsed value is not a non-empty array: ${JSON.stringify(parsed)}`);
+    }
 
     return Response.json({ insights });
   } catch (err) {
