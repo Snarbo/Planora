@@ -22,6 +22,8 @@ export const Header = () => {
   const handleCloseMenu = () => setIsMenuOpen(false);
   const handleToggleMenu = () => setIsMenuOpen((prev) => !prev);
 
+  const logo = "/assets/master/logo.svg";
+
   useEffect(() => {
     if (!navRef.current) return;
 
@@ -53,7 +55,7 @@ export const Header = () => {
       <div className="header__wrapper">
         <Link href="/plan" className="header__link" onClick={handleCloseMenu}>
           <Image
-            src="/assets/master/logo.svg"
+            src={logo}
             alt="Planora"
             width={130}
             height={25}
@@ -71,7 +73,7 @@ export const Header = () => {
       <div className="header__wrapper">
         <Link href="/plan" className="header__link" onClick={handleCloseMenu}>
           <Image
-            src="/assets/master/logo.svg"
+            src={logo}
             alt="Planora"
             width={107}
             height={20}
@@ -101,7 +103,7 @@ export const Header = () => {
       <div className="header__wrapper">
         <Link href="/plan" className="header__link" onClick={handleCloseMenu}>
           <Image
-            src="/assets/master/logo.svg"
+            src={logo}
             alt="Planora"
             width={107}
             height={20}
