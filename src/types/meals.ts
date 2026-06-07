@@ -20,6 +20,7 @@ export type Meal = {
   cookingTime?: number; // minutes
   nutrition: Nutrition;
   ingredients: { name: string; category: string }[];
+  cuisine: string;
 };
 
 export type MealSlotProps = {

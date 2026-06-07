@@ -151,12 +151,6 @@
         display: grid;
         gap: 20px;
 
-        &:first-child {
-            @media (min-width: $mq-desktop) {
-                grid-template-rows: repeat(2, 1fr);
-            }
-        }
-
         &:last-child {
             @media (min-width: $mq-desktop) {
                 grid-template-rows: repeat(3, 1fr);

@@ -22,6 +22,7 @@ import "./preferences.scss";
 export default function Preferences() {
   const profilePhotoFileInputRef = useRef<HTMLInputElement>(null);
   const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+  const formatCuisineLabel = (cuisine: string): string => cuisine.split("_").map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
   const { uploadImage, uploadLoading, uploadError } = useImageUpload({ size: 45 });
 
   // profile
@@ -212,7 +213,7 @@ export default function Preferences() {
                   type="button"
                   onClick={() => AICuisinePreferences.toggleValue(type)}
                   className={`button button--tertiary button--${AICuisinePreferences.isSelected(type) ? "active" : ""}`}>
-                  {capitalize(type)}</button>
+                  {formatCuisineLabel(type)}</button>
                 ))}
               </div>
             </div>

@@ -4,6 +4,10 @@ export const CUISINE_PREFERENCES = [
   "mexican",
   "indian",
   "british",
+  "american",
+  "mediterranean",
+  "middle_eastern",
+  "french"
 ] as const;
 
 export type CuisinePreferences = (typeof CUISINE_PREFERENCES)[number];

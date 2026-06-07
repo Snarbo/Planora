@@ -23,8 +23,8 @@ export async function POST(req: Request) {
   try {
     const { meals, emptySlots, preferences }: RequestBody = await req.json();
 
-    const slimMeals = meals.map(({ id, name, mealType, dietTypes, nutrition }) => ({
-      id, name, mealType, dietTypes, nutrition
+    const slimMeals = meals.map(({ id, name, mealType, dietTypes, nutrition, cuisine }) => ({
+      id, name, mealType, dietTypes, nutrition, cuisine
     }));
 
     const prompt = `You are a meal planning assistant. Your job is to assign meals to empty slots in a weekly meal plan.
@@ -47,6 +47,7 @@ export async function POST(req: Request) {
     - Respect the diet type (e.g. vegetarian users must only get vegetarian meals)
     - Try to vary meals across the week, avoid repeating the same meal
     - Try to keep daily calories close to the target across the 3 meals
+    - If cuisine preferences are specified, strongly favour meals whose cuisine matches; only use non-matching cuisines if no suitable match exists for that slot
 
     Return ONLY a valid JSON array, no explanation or markdown:
     [
