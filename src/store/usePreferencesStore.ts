@@ -12,7 +12,7 @@ export const usePreferencesStore = create<PreferencesState>()(
   persist(
     (set, get) => ({
       //profile
-      profilePhoto: "/assets/master/user.webp",
+      profilePhoto: "/assets/master/avatar.webp",
       setProfilePhoto: (photo) => set({ profilePhoto: photo }),
 
       profileName: "John Smith",

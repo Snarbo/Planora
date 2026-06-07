@@ -22,8 +22,6 @@ export const Header = () => {
   const handleCloseMenu = () => setIsMenuOpen(false);
   const handleToggleMenu = () => setIsMenuOpen((prev) => !prev);
 
-  const userImage = "/assets/master/user.webp" as string;
-
   useEffect(() => {
     if (!navRef.current) return;
 
