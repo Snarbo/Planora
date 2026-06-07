@@ -159,7 +159,7 @@ export default function Preferences() {
               </div>
             </div>
           </div>
-          <div className="content__group">
+          <div id="aiSettings" className="content__group">
             <h3 className="content__title">AI settings</h3>
             <div className="preferences__row preferences__row--meal-generation">
               <div>

@@ -1,1 +1,0 @@
-export type NutritionFilters = "day" | "week" | "month";

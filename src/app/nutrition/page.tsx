@@ -1,9 +1,9 @@
 "use client";
 
+import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useMealPlans } from "@/hooks/useMealPlans";
 import { TopBar } from "@/components/TopBar/TopBar";
 import { Stats } from "@/components/Stats/Stats";
-import { NutritionFilter } from "@/components/Filters/NutritionFilter";
 import { CaloriesChart } from "@/components/Charts/CaloriesChart";
 import { MacroChart } from "@/components/Charts/MacroChart";
 import { GoalChart } from "@/components/Charts/GoalChart";
@@ -16,6 +16,7 @@ import {
 import "./nutrition.scss";
 
 export default function Nutrition() {
+  const AINutritionInsights = usePreferencesStore((state) => state.AINutritionInsights);
   const { plans } = useMealPlans();
 
   return (
@@ -23,7 +24,6 @@ export default function Nutrition() {
       <TopBar />
       <div className="standard-content__wrapper">
         <Stats stats={["plannedAvgCalories", "plannedAvgProtein", "carbs", "fat"]} />
-        {/* <NutritionFilter activeFilters={activeFilters} handleFilter={handleFilter} /> */}
         <div className="content__groups content__groups--calories-macro-goal">
           <div className="content__group content__group--calories">
             <h3 className="content__title">Calories this week</h3>
@@ -49,7 +49,13 @@ export default function Nutrition() {
               </div>
               <h3 className="content__title">AI Nutrition Insights</h3>
             </div>
-            <Insights weekPlan={plans} />
+            <div className="insights__wrapper">
+              {AINutritionInsights ? (
+              <Insights weekPlan={plans} />
+              ) : (
+                <p>To view insights, toggle Nutrition insights in the <a href="/preferences">AI settings.</a></p>
+              )} 
+            </div>    
           </div>
         </div>   
       </div>
