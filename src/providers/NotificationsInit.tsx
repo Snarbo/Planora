@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useStatsStore } from "@/store/useStatsStore";
 import { useMealPlansStore } from "@/store/useMealPlansStore";
-import { getUnplannedMeals, scheduleMealReminderAt10am, hasShoppingListFiredThisWeek, markShoppingListFiredThisWeek, hasWeeklySummaryFiredThisWeek, markWeeklySummaryFiredThisWeek  } from "@/utils/notifications";
+import { getUnplannedMeals, scheduleMealReminderAt10am, hasShoppingListFiredThisWeek, markShoppingListFiredThisWeek, hasWeeklySummaryFiredThisWeek, markWeeklySummaryFiredThisWeek  } from "@/lib/notifications";
 import { useToast } from "@/hooks/useToast";
 
 export const NotificationsInit = () => {

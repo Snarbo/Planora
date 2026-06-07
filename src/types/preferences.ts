@@ -1,10 +1,3 @@
-export const UNITS = [
-  "metric",
-  "imperial",
-] as const;
-
-export type Units = (typeof UNITS)[number];
-
 export const CUISINE_PREFERENCES = [
   "italian",
   "asian",
@@ -54,9 +47,6 @@ export type PreferencesState = {
 
   profileEmail: string;
   setProfileEmail: (email: string) => void;
-
-  profileUnits: Units;
-  setProfileUnits: (units: Units) => void;
 
   //AI
   AIMealGeneration: boolean;

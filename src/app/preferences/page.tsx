@@ -9,8 +9,6 @@ import { TopBar } from "@/components/TopBar/TopBar";
 import { Toggle } from "@/components/Toggle/Toggle";
 
 import {
-  UNITS,
-  Units,
   CUISINE_PREFERENCES,
   CuisinePreferences,
   DIET_TYPES,
@@ -42,11 +40,6 @@ export default function Preferences() {
     setter: usePreferencesStore((s) => s.setProfileEmail),
     validator: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
     errorMessage: "Please enter a valid email",
-  });
-
-  const profileUnits = usePreferencesField<Units>({
-    value: usePreferencesStore((s) => s.profileUnits),
-    setter: usePreferencesStore((s) => s.setProfileUnits),
   });
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -162,22 +155,6 @@ export default function Preferences() {
                 {email.error && (
                   <p className="error">{email.error}</p>
                 )}
-              </div>
-            </div>
-            <div className="preferences__row preferences__row--units">
-              <div>
-                <p className="preferences__row-title">Units</p>
-                <p className="preferences__row-content">Weight and measurement system</p>
-              </div>
-              <div className="preferences__buttons">
-                {UNITS.map((type: Units) => (
-                  <button
-                    key={type}
-                    type="button"
-                    onClick={() => profileUnits.selectValue(type)}
-                    className={`button button--tertiary button--${profileUnits.isSelected(type) ? "active" : ""}`}>
-                    {capitalize(type)}</button>
-                ))}
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 import {
-  Units,
   CuisinePreferences,
   DietTypes,
   Allergies,
@@ -21,9 +20,6 @@ export const usePreferencesStore = create<PreferencesState>()(
 
       profileEmail: "john.smith@gmail.com",
       setProfileEmail: (email) => set({ profileEmail: email }),
-
-      profileUnits: "metric",
-      setProfileUnits: (units: Units) => set({ profileUnits: units }),
 
       //AI
       AIMealGeneration: true,
