@@ -4,18 +4,24 @@ import { useEffect } from "react";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { useStatsStore } from "@/store/useStatsStore";
 import { useMealPlansStore } from "@/store/useMealPlansStore";
-import { getUnplannedMeals, scheduleMealReminderAt10am, hasShoppingListFiredThisWeek, markShoppingListFiredThisWeek } from "@/utils/notifications";
+import { getUnplannedMeals, scheduleMealReminderAt10am, hasShoppingListFiredThisWeek, markShoppingListFiredThisWeek, hasWeeklySummaryFiredThisWeek, markWeeklySummaryFiredThisWeek  } from "@/utils/notifications";
 import { useToast } from "@/hooks/useToast";
 
 export const NotificationsInit = () => {
   const notificationMealReminder = usePreferencesStore((s) => s.notificationMealReminder);
   const notificationShoppingList = usePreferencesStore((s) => s.notificationShoppingList);
   const notificationGoalMilestones = usePreferencesStore((s) => s.notificationGoalMilestones);
+  const notificationWeeklySummary = usePreferencesStore((s) => s.notificationWeeklySummary);
+
   const streak = useStatsStore((s) => s.getStreak());
+  const avgCalories = useStatsStore((s) => s.getAverageCalories());
+  const avgProtein = useStatsStore((s) => s.getPlannedAvgProtein());
+  const goalHitRate = useStatsStore((s) => s.getGoalHitRate());
+
   const plans = useMealPlansStore((s) => s.plans);
   const { handleNotificationToast } = useToast();
 
-  // 🔔 Meal Reminder
+  //meal Reminder
   useEffect(() => {
     if (!notificationMealReminder) return;
 
@@ -42,6 +48,32 @@ export const NotificationsInit = () => {
   }, [plans, notificationShoppingList]);
 
   //weekly summary 
+  useEffect(() => {
+    if (!notificationWeeklySummary) return;
+    if (hasWeeklySummaryFiredThisWeek()) return;
+
+    const today = new Date().getDay();
+
+    if (today !== 1) return; // 1 = Monday
+
+    const fire = async () => {
+      try {
+        const res = await fetch("/api/generate-weekly-recap", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ avgCalories, avgProtein, goalHitRate }),
+        });
+
+        const data = await res.json();
+        handleNotificationToast("Weekly Recap", data.message);
+        markWeeklySummaryFiredThisWeek();
+      } catch (err) {
+        console.error("Weekly recap failed:", err);
+      }
+    };
+
+    fire();
+  }, [notificationWeeklySummary, avgCalories, avgProtein, goalHitRate]);
 
   //milestones
   const streakMilestones = [

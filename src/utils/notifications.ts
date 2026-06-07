@@ -34,14 +34,6 @@ const getISOWeekKey = (): string => {
   return `${year}-W${String(week).padStart(2, "0")}`;
 };
 
-export const hasShoppingListFiredThisWeek = (): boolean => {
-  return localStorage.getItem("shopping-list-notified-week") === getISOWeekKey();
-};
-
-export const markShoppingListFiredThisWeek = (): void => {
-  localStorage.setItem("shopping-list-notified-week", getISOWeekKey());
-};
-
 export const getUnplannedMeals = (plans: StoredMealPlan[]): number => {
   const today = new Date();
 
@@ -93,4 +85,20 @@ export const scheduleMealReminderAt10am = (callback: () => void): () => void => 
     clearTimeout(timeoutId);
     clearInterval(intervalId);
   };
+};
+
+export const hasShoppingListFiredThisWeek = (): boolean => {
+  return localStorage.getItem("shopping-list-notified-week") === getISOWeekKey();
+};
+
+export const markShoppingListFiredThisWeek = (): void => {
+  localStorage.setItem("shopping-list-notified-week", getISOWeekKey());
+};
+
+export const hasWeeklySummaryFiredThisWeek = (): boolean => {
+  return localStorage.getItem("weekly-summary-notified-week") === getISOWeekKey();
+};
+
+export const markWeeklySummaryFiredThisWeek = (): void => {
+  localStorage.setItem("weekly-summary-notified-week", getISOWeekKey());
 };
