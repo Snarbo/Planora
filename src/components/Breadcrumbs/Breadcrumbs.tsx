@@ -1,6 +1,7 @@
 "use client"
 
 import { usePathname } from "next/navigation";
+import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { usePreferencesStore } from "@/store/usePreferencesStore";
 import { getBreadcrumb } from "@/config/getBreadcrumb";
 
@@ -12,9 +13,11 @@ export const Breadcrumbs = () => {
     const pathname = usePathname();
     const breadcrumb = getBreadcrumb(pathname);
     const theme = usePreferencesStore((state) => state.theme);
+    const { isMobile } = useBreakpoints();
 
     if (!breadcrumb) return null;
 
+    const isMealDetailMobile = isMobile && pathname.startsWith("/meals/");
     const Icon = breadcrumb.icon;
     
     return (
@@ -26,11 +29,12 @@ export const Breadcrumbs = () => {
             {breadcrumb.parentPage && (
                 <>
                     <p>{breadcrumb.parentPage}</p>
-                    <IconChevronRight className="breadcrumbs__chevron" color={theme == "light" ? "primary" : "ivory"} />
+                    {!isMealDetailMobile && <IconChevronRight className="breadcrumbs__chevron" color={theme == "light" ? "primary" : "ivory"} />}  
                 </>
             )}
 
-            <p>{breadcrumb.pageTitle}</p>
+            {!isMealDetailMobile && <p>{breadcrumb.pageTitle}</p>}
+            
         </div>
     );
 }
