@@ -124,12 +124,12 @@
 .history .meal-slot {
     min-height: 62px;
 
-    &__info {
-        margin: 8px 0 0;
+    &__info {     
         @include font-rem(12);
         color: $color-grey;
 
         @media (min-width: $mq-desktop) {
+            margin: 8px 0 0;
             @include font-rem(14);
         }
     }
