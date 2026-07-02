@@ -91,7 +91,7 @@ export const useMealPlans = () => {
     });
   };
 
-  const generateMealPlan = async (allMeals: Meal[]) => {
+  const generateMealPlan = async (allMeals: Meal[]): Promise<"success" | "rate_limited" | "error"> => {
     const {
       dietaryDietType,
       dietaryAllergies,
@@ -130,7 +130,7 @@ export const useMealPlans = () => {
           .map((type) => ({ date, type }));
       });
 
-    if (emptySlots.length === 0) return;
+    if (emptySlots.length === 0) return "success";
 
     const res = await fetch("/api/generate-meal-plan", {
       method: "POST",
@@ -147,11 +147,15 @@ export const useMealPlans = () => {
       }),
     });
 
+    if (res.status === 429) {
+      return "rate_limited";
+    }
+
     const data = await res.json();
 
     if (!res.ok || !Array.isArray(data)) {
       console.error("Meal plan generation failed:", data);
-      return;
+      return "error";
     }
 
     const assignments: { date: string; type: MealType; meal: Meal }[] = data;
@@ -183,6 +187,8 @@ export const useMealPlans = () => {
       savePlans(copy);
       return copy;
     });
+
+    return "success";
   };
 
   return {

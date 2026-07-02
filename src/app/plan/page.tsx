@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useBreakpoints } from "@/hooks/useBreakpoints";
 import { useMeals } from "@/hooks/useMeals";
@@ -95,16 +95,27 @@ export default function Plan() {
 
   //AI meal generation
   const [isGenerating, setIsGenerating] = useState(false);
+  const [alreadyGeneratedToday, setAlreadyGeneratedToday] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/generate-meal-plan/status")
+      .then((res) => res.json())
+      .then((data) => setAlreadyGeneratedToday(data.alreadyGeneratedToday))
+      .catch(() => {});
+  }, []);
 
   const handleAIGenerate = async () => {
     setIsGenerating(true);
-    await generateMealPlan(meals  as Meal[]);
+    const status = await generateMealPlan(meals as Meal[]);
+    if (status === "rate_limited") {
+      setAlreadyGeneratedToday(true);
+    }
     setIsGenerating(false);
   };
   
   return (
     <div className="standard-content plan">
-      <TopBar onAIGenerate={handleAIGenerate} isGenerating={isGenerating} />
+      <TopBar onAIGenerate={handleAIGenerate} isGenerating={isGenerating} alreadyGeneratedToday={alreadyGeneratedToday} />
       <div className="standard-content__wrapper">
         <Stats stats={["plannedAvgCalories", "plannedMeals", "plannedAvgProtein", "plannedShoppingItems"]}/>
         <div className="standard-content__layout">
@@ -156,10 +167,14 @@ export default function Plan() {
                   <button
                     className="button button--icon button--primary"
                     onClick={handleAIGenerate}
-                    disabled={isGenerating}
+                    disabled={isGenerating || alreadyGeneratedToday}
                   >
                     <IconStars color="tertiary" />
-                    {isGenerating ? "Generating..." : "AI Generate"}
+                    {isGenerating
+                      ? "Generating..."
+                      : alreadyGeneratedToday
+                      ? "Already Generated Today"
+                      : "AI Generate"}
                   </button>
                 </div>
                 

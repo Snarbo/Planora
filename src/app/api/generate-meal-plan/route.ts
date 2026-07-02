@@ -2,6 +2,9 @@ import Groq from "groq-sdk";
 import type { Meal, MealType } from "@/types/meals";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const DB_URL = process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL;
+
+const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
 type EmptySlot = {
   date: string;
@@ -19,8 +22,52 @@ type RequestBody = {
   };
 };
 
+function getClientIp(req: Request): string {
+  const forwardedFor = req.headers.get("x-forwarded-for");
+  if (forwardedFor) return forwardedFor.split(",")[0].trim();
+  const ip = req.headers.get("x-real-ip") || "unknown";
+  return ip;
+}
+
+// RTDB keys can't contain . # $ / [ ]
+function toSafeKey(ip: string): string {
+  return ip.replace(/[.#$/[\]]/g, "_");
+}
+
+async function getLastRequestTime(safeIp: string): Promise<number | null> {
+  const res = await fetch(`${DB_URL}/rateLimits/${safeIp}.json`);
+  const data = await res.json();
+  return data?.lastRequest ?? null;
+}
+
+async function setLastRequestTime(safeIp: string): Promise<void> {
+  const res = await fetch(`${DB_URL}/rateLimits/${safeIp}.json`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ lastRequest: Date.now() }),
+  });
+
+  if (!res.ok) {
+    const body = await res.text();
+    console.error("Failed to write rate limit:", res.status, body);
+  }
+}
+
 export async function POST(req: Request) {
   try {
+    const ip = getClientIp(req);
+    const safeIp = toSafeKey(ip);
+
+    const lastRequest = await getLastRequestTime(safeIp);
+
+    if (lastRequest && Date.now() - lastRequest < ONE_DAY_MS) {
+      const retryAfterMs = ONE_DAY_MS - (Date.now() - lastRequest);
+      return Response.json(
+        { error: "You've already generated a meal plan today. Try again tomorrow." },
+        { status: 429, headers: { "Retry-After": String(Math.ceil(retryAfterMs / 1000)) } }
+      );
+    }
+
     const { meals, emptySlots, preferences }: RequestBody = await req.json();
 
     const slimMeals = meals.map(({ id, name, mealType, dietTypes, nutrition, cuisine }) => ({
@@ -75,6 +122,9 @@ export async function POST(req: Request) {
       type: assignment.type,
       meal: meals.find((m) => m.id === assignment.mealId),
     }));
+
+    // Only record the request as "used" once we know Groq succeeded
+    await setLastRequestTime(safeIp);
 
     return Response.json(result);
   } catch (err) {

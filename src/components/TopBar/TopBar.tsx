@@ -13,9 +13,10 @@ import {
 type TopBarProps = {
   onAIGenerate?: () => void;
   isGenerating?: boolean;
+  alreadyGeneratedToday?: boolean;
 };
 
-export const TopBar = ({ onAIGenerate, isGenerating }: TopBarProps) => {
+export const TopBar = ({ onAIGenerate, isGenerating, alreadyGeneratedToday }: TopBarProps) => {
   const pathname = usePathname();
   const { isTablet, isDesktop } = useBreakpoints();
   const AIMealGeneration = usePreferencesStore((state) => state.AIMealGeneration);
@@ -30,10 +31,14 @@ export const TopBar = ({ onAIGenerate, isGenerating }: TopBarProps) => {
         <button
           className="button button--icon button--primary"
           onClick={onAIGenerate}
-          disabled={isGenerating}
+          disabled={isGenerating || alreadyGeneratedToday}
         >
           <IconStars color="tertiary" />
-          {isGenerating ? "Generating..." : "AI Generate"}
+          {isGenerating
+            ? "Generating..."
+            : alreadyGeneratedToday
+            ? "Already Generated Today"
+            : "AI Generate"}
         </button>
       )}
     </div>
