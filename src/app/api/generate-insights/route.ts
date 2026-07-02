@@ -1,6 +1,10 @@
 import Groq from "groq-sdk";
+import { getClientIp, toSafeKey, checkAndIncrementRateLimit } from "@/lib/rateLimit";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+
+const HOUR_MS = 60 * 60 * 1000;
+const LIMIT_PER_HOUR = 15;
 
 type MealNutrition = {
   kcal: number;
@@ -68,6 +72,23 @@ function computeDailyTotals(weekPlan: DayPlan[]) {
 
 export async function POST(req: Request) {
   try {
+    const ip = getClientIp(req);
+    const safeIp = toSafeKey(ip);
+
+    const { allowed, retryAfterMs } = await checkAndIncrementRateLimit(
+      "rateLimits/insights",
+      safeIp,
+      LIMIT_PER_HOUR,
+      HOUR_MS
+    );
+
+    if (!allowed) {
+      return Response.json(
+        { error: "Too many insight requests. Try again shortly." },
+        { status: 429, headers: { "Retry-After": String(Math.ceil((retryAfterMs ?? HOUR_MS) / 1000)) } }
+      );
+    }
+
     const { weekPlan, preferences }: RequestBody = await req.json();
 
     const dailyTotals = computeDailyTotals(weekPlan);
