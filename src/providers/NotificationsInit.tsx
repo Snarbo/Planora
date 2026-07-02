@@ -64,6 +64,11 @@ export const NotificationsInit = () => {
           body: JSON.stringify({ avgCalories, avgProtein, goalHitRate }),
         });
 
+        if (!res.ok) {
+          console.error("Weekly recap failed:", res.status);
+          return;
+        }
+
         const data = await res.json();
         handleNotificationToast("Weekly Recap", data.message);
         markWeeklySummaryFiredThisWeek();
