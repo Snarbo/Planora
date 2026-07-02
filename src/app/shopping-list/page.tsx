@@ -41,6 +41,7 @@ export default function ShoppingList() {
   const [activeSwapItem, setActiveSwapItem] = useState<string | null>(null);
   const [substitutions, setSubstitutions] = useState<string[]>([]);
   const [swapLoading, setSwapLoading] = useState(false);
+  const [swapRateLimited, setSwapRateLimited] = useState(false);
 
   const { AIIngredientsSwaps, setAIIngredientsSwaps, dietaryDietType, dietaryAllergies } = usePreferencesStore();
   const { plans, loading } = useMealPlans();
@@ -67,6 +68,7 @@ export default function ShoppingList() {
 
     setActiveSwapItem(ingredientName);
     setSubstitutions([]);
+    setSwapRateLimited(false);
     setSwapLoading(true);
 
     try {
@@ -79,6 +81,11 @@ export default function ShoppingList() {
           allergies: dietaryAllergies ?? [],
         }),
       });
+
+      if (res.status === 429) {
+        setSwapRateLimited(true);
+        return;
+      }
 
       const data = await res.json();
       setSubstitutions(data.substitutions ?? []);
@@ -209,6 +216,8 @@ export default function ShoppingList() {
               <div className="sidebar__items">
                 {swapLoading ? (
                   <p className="sidebar__loading">Finding substitutions...</p>
+                ) : swapRateLimited ? (
+                  <p className="sidebar__empty">You've hit the swap limit for now — try again in a bit.</p>
                 ) : substitutions.length > 0 ? (
                   substitutions.map((sub) => (
                     <div
