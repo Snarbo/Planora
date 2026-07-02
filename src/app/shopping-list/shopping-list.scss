@@ -4,20 +4,30 @@
 .shopping-list {
 
     .standard-content {
+
         &__layout {
             margin: 0;
         }
 
         &__view {
+            border-top: 1px solid;
+            @include theme-property("border-color", transparent, $color-border-faint);
+
             @media (min-width: $mq-desktop) {
+                border: 0;
                 padding: 0 20px 0 0;
             }
         }
     }
 
     &__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
         @media (min-width: $mq-desktop) {
             display: flex;
+            flex-direction: row;
             flex: 1;
             min-height: 0;
         }
